@@ -1,5 +1,12 @@
 :root {
-  max-width: 1100px;
+  --primary-blue: #7BD0FF;
+  --secondary-blue: #C0E8FF;
+  --primary-gray: #4D4D4D;
+  --secondary-gray: #707070;
+  --primary-beige: #E0D6C3;
+  --secondary-beige: #EFEAE1;
+  --primary-white: #FFFFFF;
+  --secondary-white: #F5F5F5;
 }
 
 * {
