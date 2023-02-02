@@ -60,6 +60,7 @@ export default function Navbar() {
       </aside>
       <style jsx>
         {`
+          /////////////*SIDE MENU & ANIMATION
           .side-menu {
             position: fixed;
             top: 10%;
@@ -109,6 +110,7 @@ export default function Navbar() {
             height: 40px;
           }
 
+          /////////////*SIDE MENU TO X ANIMATION*/
           .nav__menuwrap {
             display: flex;
             flex-direction: column;
