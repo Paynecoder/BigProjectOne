@@ -1,0 +1,35 @@
+.navwrap {
+    width: 100%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.nav__title {
+    color: var(--primary-blue);
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.nav__title > span {
+    color: var(--primary-beige);
+    font-size: 32px;
+}
+
+.nav__menuwrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__menuwrap > span {
+    background-color: var(--primary-beige);
+    width: 2.5em;
+    margin-bottom: 5px;
+    height: 0.5em;
+    border-radius: 3px;
+}
