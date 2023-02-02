@@ -21,15 +21,9 @@
     font-size: 32px;
 }
 
-.nav__menuwrap {
-    display: flex;
-    flex-direction: column;
-}
 
-.nav__menuwrap > span {
-    background-color: var(--primary-beige);
-    width: 2.5em;
-    margin-bottom: 5px;
-    height: 0.5em;
-    border-radius: 3px;
+.menu__bear {
+    margin-top: 2.5em;
+    width: 125px;
+    height: 125px;
 }
