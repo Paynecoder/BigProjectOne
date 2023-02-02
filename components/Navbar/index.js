@@ -91,7 +91,6 @@ export default function Navbar() {
             display: flex;
             align-items: center;
             gap: 1em;
-            font-family: "Nunito";
           }
 
           .side-menu > ul > li:hover {
@@ -101,6 +100,7 @@ export default function Navbar() {
           .side-menu > ul > li > span {
             font-size: 1.75em;
             font-weight: 900;
+            white-space: nowrap;
             color: var(--primary-gray);
           }
 
