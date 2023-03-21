@@ -75,6 +75,7 @@ export default function Navbar() {
             flex-direction: column;
             align-items: center;
             border-radius: 25px 0 0 25px;
+            z-index: 10;
           }
 
           .side-menu.open {
