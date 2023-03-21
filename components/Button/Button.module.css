@@ -1,0 +1,40 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.buttonBody {
+    background-color: #7BD0FF;
+    transition-duration: 200ms;
+    width: 330px;
+    height: 85px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 32px;
+    position: relative;
+    transform: translateY(0px);
+    font-weight: bold;
+}
+
+.buttonClicked {
+    position: relative;
+    transform: translateY(10px);
+    transition-duration: 200ms;
+    color: rgb(240, 240, 240);
+}
+
+
+.buttonShadow {
+    background-color: #56bef7;
+    position: relative;
+    transform: translateY(-75px);
+    z-index: -1;
+    width: 330px;
+    height: 85px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 32px;
+}
