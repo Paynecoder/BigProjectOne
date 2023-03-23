@@ -1,11 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar/index.js";
 import Button from "@/components/Button/index.js";
-
-const inter = Inter({ subsets: ["latin"] });
+import Landing from "@/components/LandingAnimation/index.js";
 
 export default function Home() {
   return (
@@ -15,9 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
+        <div className={styles.animation}>
+          <Landing />
+        </div>
         <div className={styles.button}>
-          <Button word="Button" />
+          <Button word={"Get Started"} />
         </div>
       </main>
     </>
