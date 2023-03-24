@@ -16,7 +16,7 @@ export default function Home() {
           <Landing />
         </div>
         <div className={styles.button}>
-          <Button word={"Get Started"} />
+          <Button word={"Get Started"} route={"/intro"} />
         </div>
       </main>
     </>
