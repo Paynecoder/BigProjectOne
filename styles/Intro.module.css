@@ -24,14 +24,14 @@
 .message h1 {
     font-size: 3rem;
     font-weight: 900;
-    color: var(--color-gray-primary);
+    color: var(--primary-gray);
     margin-bottom: 1rem;
 }
 
 .message p {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--color-gray-primary);
+    color: var(--secondary-gray);
     margin-bottom: 1rem;
 }
 

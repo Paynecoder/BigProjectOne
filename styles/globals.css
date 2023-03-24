@@ -22,15 +22,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-:root {
-  --color-blue-primary: #7BD0FF;
-  --color-blue-secondary: #C0E8FF;
-  --color-blue-accent: #4FA4D3;
-  --color-beige-primary: #E0D6C3;
-  --color-beige-secondary: #EFEAE1;
-  --color-white-primary: #FFFFFF;
-  --color-white-secondary: #F5F5F5;
-  --color-gray-primary: #4D4D4D;
-  --color-gray-secondary: #707070;
-}
