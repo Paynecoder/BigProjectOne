@@ -8,6 +8,7 @@
     padding-top: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    z-index: 999;
 }
 
 .nav__title {

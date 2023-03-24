@@ -1,0 +1,48 @@
+.button {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.main {
+    display: grid;
+    place-items: center;
+}
+
+.iceberg {
+    margin-top: 2rem;
+}
+
+.message {
+    text-align: center;
+    padding: 30px;
+}
+
+.message h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-gray-primary);
+    margin-bottom: 1rem;
+}
+
+.message p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-gray-primary);
+    margin-bottom: 1rem;
+}
+
+.message p b {
+    font-weight: 900;
+}
+
+.tutorial {
+    position: absolute;
+    bottom: 45px;
+    color: var(--color-gray-primary);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
