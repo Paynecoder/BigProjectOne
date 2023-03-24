@@ -42,7 +42,7 @@
 .tutorial {
     position: absolute;
     bottom: 45px;
-    color: var(--color-gray-primary);
+    color: var(--primary-gray);
     font-weight: 900;
     font-size: 1.5rem;
 }
