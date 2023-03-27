@@ -4,7 +4,11 @@ import animation from "@/public/lottie/visit-burr-1.json";
 export default function VisitBurrOne() {
   return (
     <>
-      <main>
+      <main
+        style={{
+          overflow: "hidden",
+        }}
+      >
         <Lottie
           animationData={animation}
           loop={true}

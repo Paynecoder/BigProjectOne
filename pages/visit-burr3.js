@@ -4,7 +4,11 @@ import Lottie from "lottie-react";
 export default function VisitBurrThree() {
   return (
     <>
-      <main>
+      <main
+        style={{
+          overflow: "hidden",
+        }}
+      >
         <Lottie
           animationData={animation}
           loop={true}
