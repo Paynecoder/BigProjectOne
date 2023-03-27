@@ -2,5 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/visit-burr5": "pages/visit-burr5.js"
+  "/visit-burr1": "pages/visit-burr1.js",
+  "/": "pages/index.js"
 }

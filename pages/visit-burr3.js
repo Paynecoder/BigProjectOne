@@ -4,13 +4,15 @@ import Lottie from "lottie-react";
 export default function VisitBurrThree() {
   return (
     <>
-      <Lottie
-        animationData={animation}
-        loop={true}
-        onComplete={() => {
-          console.log("Animation complete");
-        }}
-      />
+      <main>
+        <Lottie
+          animationData={animation}
+          loop={true}
+          onComplete={() => {
+            console.log("Animation complete");
+          }}
+        />
+      </main>
     </>
   );
 }
