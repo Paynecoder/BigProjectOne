@@ -11,7 +11,6 @@ export default function Quiz() {
   const [currentQuestionData, setCurrentQuestionData] = useState({});
 
   let score = 0;
-
   useEffect(() => {
     setCurrentQuestionData(quizData[currentQuestion]);
   }, [currentQuestion]);
