@@ -18,7 +18,7 @@ export const questions = [
     title: "Question 3",
     question: "How do you commute to school/work?",
     image: "../public/images/questions/3.svg",
-    answers: ["Yes", "No"],
+    answers: ["Walk/Bike", "Transit", "Drive"],
   },
   {
     id: 4,
