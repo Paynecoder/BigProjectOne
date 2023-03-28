@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className={styles.button}>
-          <Button word={"Climate Quiz"} />
+          <Button word={"Climate Quiz"} route={"/quiz"} />
         </div>
         <div className={styles.tutorial}>View Tutorial</div>
       </main>
