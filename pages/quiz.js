@@ -34,35 +34,35 @@ export default function Quiz() {
           <h1 className={styles.title}>{currentQuestionData.title}</h1>
           <p>{currentQuestionData.question}</p>
         </div>
-        <div>
+        <div className={styles.buttons}>
           {currentQuestionData.answers?.map((answer, index) => (
-            <button
-              key={index}
-              word={answer}
-              route={""}
-              onClick={() => {
-                if (
-                  answer === currentQuestionData.correctAnswer &&
-                  currentQuestion === currentQuestionData.id
-                ) {
-                  setScore(score + 1);
-                }
-                if (
-                  currentQuestion === questions.length - 1 &&
-                  currentQuestionData.id === questions.length - 1
-                ) {
-                  if (answer === currentQuestionData.correctAnswer) {
-                    router.push(`/results/visit-burr${score}`);
-                  } else {
-                    router.push(`/results/visit-burr${score - 1}`);
+            <div className={styles.buttonContainer} key={index}>
+              <button
+                className={styles.buttonBody}
+                onClick={() => {
+                  if (
+                    answer === currentQuestionData.correctAnswer &&
+                    currentQuestion === currentQuestionData.id
+                  ) {
+                    setScore(score + 1);
                   }
-                } else {
-                  setCurrentQuestion(currentQuestion + 1);
-                }
-              }}
-            >
-              {answer}
-            </button>
+                  if (
+                    currentQuestion === questions.length - 1 &&
+                    currentQuestionData.id === questions.length - 1
+                  ) {
+                    if (answer === currentQuestionData.correctAnswer) {
+                      router.push(`/results/visit-burr${score}`);
+                    } else {
+                      router.push(`/results/visit-burr${score - 1}`);
+                    }
+                  } else {
+                    setCurrentQuestion(currentQuestion + 1);
+                  }
+                }}
+              >
+                {answer}
+              </button>
+            </div>
           ))}
         </div>
       </main>

@@ -25,7 +25,7 @@ export default function Button({ word, route }) {
   const handleClick = () => {
     setTimeout(() => {
       router.push(route);
-    }, 325);
+    }, 350);
   };
 
   return (
@@ -38,7 +38,6 @@ export default function Button({ word, route }) {
         >
           {word}
         </button>
-        <button className={styles.buttonShadow}>h</button>
       </div>
     </>
   );

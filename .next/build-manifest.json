@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,20 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/intro": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/intro.js"
-    ],
     "/quiz": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/quiz.js"
     ],
-    "/results/visit-burr4": [
+    "/results/visit-burr3": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/results/visit-burr4.js"
+      "static/chunks/pages/results/visit-burr3.js"
     ]
   },
   "ampFirstPages": []

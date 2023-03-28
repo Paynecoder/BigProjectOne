@@ -3,7 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/quiz": "pages/quiz.js",
-  "/results/visit-burr4": "pages/results/visit-burr4.js",
-  "/": "pages/index.js",
-  "/intro": "pages/intro.js"
+  "/results/visit-burr3": "pages/results/visit-burr3.js"
 }
