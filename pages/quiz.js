@@ -81,7 +81,7 @@ export default function Quiz() {
             </div>
           ))}
         </div>
-        <div>{renderPopup()}</div>
+        <div>{renderPopup(selectedAnswer, currentQuestionData)}</div>
       </main>
     </>
   );
