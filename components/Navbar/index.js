@@ -16,11 +16,11 @@ export default function Navbar() {
     <>
       <div className={styles.navwrap}>
         <div>
-          <Image src={bear} alt="Brrilliant Logo Bear" />
+          <Image src={bear} alt="Brrrilliant Logo Bear" />
         </div>
         <div>
           <h1 className={styles.nav__title}>
-            Brr<span>illiant</span>
+            Brrr<span>illiant</span>
           </h1>
         </div>
         <div
