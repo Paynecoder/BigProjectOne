@@ -25,7 +25,7 @@ export default function Button({ word, route }) {
   const handleClick = () => {
     setTimeout(() => {
       router.push(route);
-    }, 350);
+    }, 300);
   };
 
   return (
