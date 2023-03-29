@@ -4,14 +4,14 @@ import { questions } from "../data/questions.js";
 import Navbar from "../components/Navbar/index.js";
 import Image from "next/image";
 import Router from "next/router";
-import Popup from "@/components/Popup";
+import usePopup from "@/hooks/usePopup";
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [quizData, setQuizData] = useState([...questions]);
   const [currentQuestionData, setCurrentQuestionData] = useState({});
   const [score, setScore] = useState(1);
-  const [showPopup, setShowPopup] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   useEffect(() => {
     setCurrentQuestionData(quizData[currentQuestion]);
@@ -19,6 +19,7 @@ export default function Quiz() {
   }, [currentQuestion]);
 
   const router = Router;
+  const { renderPopup } = usePopup();
 
   return (
     <>
@@ -50,6 +51,7 @@ export default function Quiz() {
               <button
                 className={styles.buttonBody}
                 onClick={() => {
+                  setSelectedAnswer(answer);
                   if (
                     answer === currentQuestionData.correctAnswer ||
                     (currentQuestionData.correctAnswerTwo &&
@@ -70,6 +72,7 @@ export default function Quiz() {
                     }
                   } else {
                     setCurrentQuestion(currentQuestion + 1);
+                    setSelectedAnswer(null);
                   }
                 }}
               >
@@ -78,7 +81,7 @@ export default function Quiz() {
             </div>
           ))}
         </div>
-        <div></div>
+        <div>{renderPopup()}</div>
       </main>
     </>
   );
