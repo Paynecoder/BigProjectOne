@@ -43,8 +43,9 @@ export default function Quiz() {
                 className={styles.buttonBody}
                 onClick={() => {
                   if (
-                    answer === currentQuestionData.correctAnswer &&
-                    currentQuestion === currentQuestionData.id
+                    answer === currentQuestionData.correctAnswer ||
+                    (currentQuestionData.correctAnswerTwo &&
+                      currentQuestion === currentQuestionData.id)
                   ) {
                     setScore(score + 1);
                   }

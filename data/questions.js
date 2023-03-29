@@ -22,6 +22,7 @@ export const questions = [
     image: "/questions/3.svg",
     answers: ["Walk/Bike", "Transit", "Drive"],
     correctAnswer: "Walk/Bike",
+    correctAnswerTwo: "Transit",
   },
   {
     id: 3,
