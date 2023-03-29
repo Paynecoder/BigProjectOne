@@ -4,12 +4,14 @@ import { questions } from "../data/questions.js";
 import Navbar from "../components/Navbar/index.js";
 import Image from "next/image";
 import Router from "next/router";
+import Popup from "@/components/Popup";
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [quizData, setQuizData] = useState([...questions]);
   const [currentQuestionData, setCurrentQuestionData] = useState({});
   const [score, setScore] = useState(1);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     setCurrentQuestionData(quizData[currentQuestion]);
@@ -51,6 +53,8 @@ export default function Quiz() {
                     currentQuestionData.id === questions.length - 1
                   ) {
                     if (answer === currentQuestionData.correctAnswer) {
+                      router.push(`/results/visit-burr${score}`);
+                    } else if (score === 1) {
                       router.push(`/results/visit-burr${score}`);
                     } else {
                       router.push(`/results/visit-burr${score - 1}`);
