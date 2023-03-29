@@ -23,6 +23,14 @@ export default function Quiz() {
   return (
     <>
       <Navbar />
+      <div className={styles.progresscontainer}>
+        <div
+          className={styles.progress}
+          style={{
+            width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+          }}
+        ></div>
+      </div>
       <main className={styles.main}>
         <div>
           <Image
@@ -70,6 +78,7 @@ export default function Quiz() {
             </div>
           ))}
         </div>
+        <div></div>
       </main>
     </>
   );
