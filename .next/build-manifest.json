@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/quiz.js"
-    ],
-    "/results/visit-burr5": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/results/visit-burr5.js"
     ]
   },
   "ampFirstPages": []
