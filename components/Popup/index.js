@@ -9,8 +9,11 @@ export default function Popup({ paragraph, color }) {
           backgroundColor: color,
         }}
       >
-        <h1>Burr Says...</h1>
-        <p>{paragraph}</p>
+        <h1 className={styles.says}>Burr Says...</h1>
+        <p className={styles.paragraph}>{paragraph}</p>
+        <div>
+          <p className={styles.next}>NEXT</p>
+        </div>
       </main>
     </>
   );

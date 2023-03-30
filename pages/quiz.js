@@ -19,7 +19,7 @@ export default function Quiz() {
   }, [currentQuestion]);
 
   const router = Router;
-  const { renderPopup } = usePopup();
+  const { renderPopup, nextQuestion } = usePopup();
 
   return (
     <>
@@ -67,12 +67,19 @@ export default function Quiz() {
                       router.push(`/results/visit-burr${score}`);
                     } else if (score === 1) {
                       router.push(`/results/visit-burr${score}`);
+                    } else if (score === 6) {
+                      router.push(`/results/visit-burr${score - 1}`);
                     } else {
                       router.push(`/results/visit-burr${score - 1}`);
                     }
                   } else {
-                    setCurrentQuestion(currentQuestion + 1);
-                    setSelectedAnswer(null);
+                    setTimeout(() => {
+                      nextQuestion(
+                        setCurrentQuestion,
+                        setSelectedAnswer,
+                        currentQuestion
+                      );
+                    }, 2000);
                   }
                 }}
               >
@@ -81,7 +88,14 @@ export default function Quiz() {
             </div>
           ))}
         </div>
-        <div>{renderPopup(selectedAnswer, currentQuestionData)}</div>
+        <div className={styles.popup}>
+          {renderPopup(
+            selectedAnswer,
+            currentQuestionData,
+            currentQuestionData.goodFeedback,
+            currentQuestionData.badFeedback
+          )}
+        </div>
       </main>
     </>
   );

@@ -1,7 +1,12 @@
 import Popup from "@/components/Popup";
 
 export default function usePopup() {
-  const renderPopup = (selectedAnswer, currentQuestionData) => {
+  const renderPopup = (
+    selectedAnswer,
+    currentQuestionData,
+    goodFeedback,
+    badFeedback
+  ) => {
     if (selectedAnswer == null) {
       return null;
     }
@@ -21,12 +26,22 @@ export default function usePopup() {
     // Render the Popup component
     const popup = (
       <Popup
-        color={isCorrect ? "green" : "red"}
-        paragraph={isCorrect ? "Great job!" : "Keep trying!"}
+        color={isCorrect ? "#24CF16" : "#B91A1A"}
+        paragraph={isCorrect ? goodFeedback : badFeedback}
       />
     );
 
     return popup;
   };
-  return { renderPopup };
+
+  const nextQuestion = (
+    setCurrentQuestion,
+    setSelectedAnswer,
+    currentQuestion
+  ) => {
+    setCurrentQuestion(currentQuestion + 1);
+    setSelectedAnswer(null);
+  };
+
+  return { renderPopup, nextQuestion };
 }

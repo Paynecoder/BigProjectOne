@@ -6,6 +6,10 @@ export const questions = [
     image: "/questions/1.svg",
     answers: ["Yes", "No"],
     correctAnswer: "Yes",
+    goodFeedback:
+      "Perfect, keep it up! My friends and I appreciate you for your hard work!",
+    badFeedback:
+      "If you don’t recycle your containers, they end up in my home! ",
   },
   {
     id: 1,
@@ -14,6 +18,10 @@ export const questions = [
     image: "/questions/2.svg",
     answers: ["Yes", "No"],
     correctAnswer: "Yes",
+    goodFeedback:
+      "Great work! The world needs more people like you. You are an inspiration.",
+    badFeedback:
+      "Consider the way litter affects nature. Some poor animals could end up trying to eat it!",
   },
   {
     id: 2,
@@ -23,6 +31,10 @@ export const questions = [
     answers: ["Walk/Bike", "Transit", "Drive"],
     correctAnswer: "Walk/Bike",
     correctAnswerTwo: "Transit",
+    goodFeedback:
+      "Awesome! Being energy-efficient is one of the best ways you can help to save the world!",
+    badFeedback:
+      "Greenhouse gases are the primary cause of global warming. Be careful! ",
   },
   {
     id: 3,
@@ -32,6 +44,10 @@ export const questions = [
     image: "/questions/4.svg",
     answers: ["Yes", "No"],
     correctAnswer: "Yes",
+    goodFeedback:
+      "Nice! It’s always a good idea to conserve energy wherever you can. Keep it up!",
+    badFeedback:
+      "Remember to be mindful of your energy usage. That stuff adds up quick!",
   },
   {
     id: 4,
@@ -40,5 +56,9 @@ export const questions = [
     image: "/questions/5.svg",
     answers: ["Yes", "No"],
     correctAnswer: "Yes",
+    goodFeedback:
+      "Woohoo! Properly disposing of food helps nature to flourish and grow!",
+    badFeedback:
+      "Naturally disposing of your food scraps is an easy way to give back to nature.",
   },
 ];
