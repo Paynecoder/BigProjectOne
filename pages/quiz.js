@@ -12,6 +12,7 @@ export default function Quiz() {
   const [currentQuestionData, setCurrentQuestionData] = useState({});
   const [score, setScore] = useState(1);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [popupOpen, setPopupOpen] = useState(false);
 
   useEffect(() => {
     setCurrentQuestionData(quizData[currentQuestion]);
@@ -19,7 +20,7 @@ export default function Quiz() {
   }, [currentQuestion]);
 
   const router = Router;
-  const { renderPopup, nextQuestion } = usePopup();
+  const { renderPopup } = usePopup();
 
   return (
     <>
@@ -49,6 +50,7 @@ export default function Quiz() {
           {currentQuestionData.answers?.map((answer, index) => (
             <div className={styles.buttonContainer} key={index}>
               <button
+                disabled={selectedAnswer}
                 className={styles.buttonBody}
                 onClick={() => {
                   setSelectedAnswer(answer);
@@ -63,7 +65,10 @@ export default function Quiz() {
                     currentQuestion === questions.length - 1 &&
                     currentQuestionData.id === questions.length - 1
                   ) {
-                    if (answer === currentQuestionData.correctAnswer) {
+                    if (
+                      answer === currentQuestionData.correctAnswer ||
+                      answer === currentQuestionData.correctAnswerTwo
+                    ) {
                       router.push(`/results/visit-burr${score}`);
                     } else if (score === 1) {
                       router.push(`/results/visit-burr${score}`);
@@ -73,13 +78,7 @@ export default function Quiz() {
                       router.push(`/results/visit-burr${score - 1}`);
                     }
                   } else {
-                    setTimeout(() => {
-                      nextQuestion(
-                        setCurrentQuestion,
-                        setSelectedAnswer,
-                        currentQuestion
-                      );
-                    }, 2000);
+                    setPopupOpen(true);
                   }
                 }}
               >
@@ -88,7 +87,14 @@ export default function Quiz() {
             </div>
           ))}
         </div>
-        <div className={styles.popup}>
+        <div
+          className={styles.popup}
+          onClick={() => {
+            setCurrentQuestion(currentQuestion + 1);
+            setSelectedAnswer(null);
+            setPopupOpen(false);
+          }}
+        >
           {renderPopup(
             selectedAnswer,
             currentQuestionData,
