@@ -1,11 +1,14 @@
 .main {
-    width: 414px;
-    height: 249px;
-    border-radius: 30px 30px 0px 0px;
-    padding: 1.5em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+}
+
+.popupContainer {
+  width: 414px;
+  height: 249px;
+  border-radius: 30px 30px 0px 0px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  animation: slideInFromBottom 0.25s ease-in-out forwards;
 }
 
 
@@ -13,6 +16,7 @@
     font-size: 28px;
     font-weight: 900;
     color: white;
+    padding-bottom: 10px;
 
 }
 
@@ -25,7 +29,7 @@
 
 .main > div {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
 }
 
@@ -34,6 +38,8 @@
     font-size: 32px;
     font-weight: 900;
     font-family: 'Nunito';
+    width: 100%;
+    padding-left: 270px;
 }
 
 .animation {
@@ -60,6 +66,15 @@
     }
     to {
       opacity: 0.5;
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
     }
   }
   

@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/intro": "pages/intro.js",
   "/quiz": "pages/quiz.js",
-  "/results/visit-burr5": "pages/results/visit-burr5.js"
+  "/results/visit-burr5": "pages/results/visit-burr5.js",
+  "/results/visit-burr4": "pages/results/visit-burr4.js"
 }
