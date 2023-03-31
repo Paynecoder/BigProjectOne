@@ -45,7 +45,7 @@ export default function Quiz() {
           <Image
             src={currentQuestionData.image}
             width={225}
-            height={225}
+            height={190}
             alt="question"
           />
         </div>
