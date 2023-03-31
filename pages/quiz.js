@@ -67,23 +67,6 @@ export default function Quiz() {
                       currentQuestion === currentQuestionData.id)
                   ) {
                     setScore(score + 1);
-                  }
-                  if (
-                    currentQuestion === questions.length - 1 &&
-                    currentQuestionData.id === questions.length - 1
-                  ) {
-                    if (
-                      answer === currentQuestionData.correctAnswer ||
-                      answer === currentQuestionData.correctAnswerTwo
-                    ) {
-                      router.push(`/results/visit-burr${score}`);
-                    } else if (score === 1) {
-                      router.push(`/results/visit-burr${score}`);
-                    } else if (score === 6) {
-                      router.push(`/results/visit-burr${score - 1}`);
-                    } else {
-                      router.push(`/results/visit-burr${score - 1}`);
-                    }
                   } else {
                     setPopupOpen(true);
                   }
@@ -98,9 +81,24 @@ export default function Quiz() {
         <div
           className={styles.popup}
           onClick={() => {
-            setCurrentQuestion(currentQuestion + 1);
-            setSelectedAnswer(null);
-            setPopupOpen(false);
+            if (currentQuestion === questions.length - 1) {
+              if (
+                selectedAnswer === currentQuestionData.correctAnswer ||
+                selectedAnswer === currentQuestionData.correctAnswerTwo
+              ) {
+                router.push(`/results/visit-burr${score}`);
+              } else if (score === 1) {
+                router.push(`/results/visit-burr${score}`);
+              } else if (score === 6) {
+                router.push(`/results/visit-burr${score - 1}`);
+              } else {
+                router.push(`/results/visit-burr${score - 1}`);
+              }
+            } else {
+              setCurrentQuestion(currentQuestion + 1);
+              setSelectedAnswer(null);
+              setPopupOpen(false);
+            }
           }}
         >
           {renderPopup(
