@@ -10,7 +10,7 @@ export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [quizData, setQuizData] = useState([...questions]);
   const [currentQuestionData, setCurrentQuestionData] = useState({});
-  const [score, setScore] = useState(1);
+  const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [popupOpen, setPopupOpen] = useState(false);
 
