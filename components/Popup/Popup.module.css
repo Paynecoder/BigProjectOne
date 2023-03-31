@@ -35,3 +35,19 @@
     font-weight: 900;
     font-family: 'Nunito';
 }
+
+.animation {
+    z-index: -1;
+    position: absolute;
+    bottom: 200px;
+}
+
+.fadeBG {
+    z-index: -2;
+    width: 1000px;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}

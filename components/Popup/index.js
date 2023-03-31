@@ -1,3 +1,5 @@
+import Lottie from "lottie-react";
+import animation from "@/public/lottie/burr-popup.json";
 import styles from "./Popup.module.css";
 
 export default function Popup({ paragraph, color }) {
@@ -14,6 +16,15 @@ export default function Popup({ paragraph, color }) {
         <div>
           <p className={styles.next}>NEXT</p>
         </div>
+        <Lottie
+          animationData={animation}
+          loop={false}
+          className={styles.animation}
+          onComplete={() => {
+            console.log("Animation complete");
+          }}
+        />
+        <div className={styles.fadeBG}></div>
       </main>
     </>
   );
