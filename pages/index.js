@@ -12,6 +12,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className={styles.main}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>Brrriliant</h1>
+          <h1 className={styles.titleShadow}>Brrriliant</h1>
+        </div>
         <div className={styles.animation}>
           <Landing />
         </div>

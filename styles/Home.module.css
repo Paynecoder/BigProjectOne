@@ -1,3 +1,28 @@
+.titleContainer {
+    position: absolute;
+    top: 10px;
+    animation: slideInFromTop .5s forwards;
+    animation-delay: 3s;
+    transform: translateY(-160%);
+    opacity: 0;
+}
+
+.title {
+    top: 0px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary-blue);
+}
+
+.titleShadow {
+    z-index: -1;
+    position: absolute;
+    top: 3px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #56bef7;
+}
+
 .button {
     position: absolute;
     bottom: 5%;
@@ -7,7 +32,8 @@
     z-index: 10;
     animation: slideInFromBottom .5s forwards;
     animation-delay: 3s;
-    transform: translateY(160%)
+    transform: translateY(160%);
+    opacity: 0;
 }
 
 .main {
@@ -22,8 +48,21 @@
 @keyframes slideInFromBottom {
     from {
       transform: translateY(160%);
+      opacity: 0;
     }
     to {
       transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-160%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 100%;
     }
   }
