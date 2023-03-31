@@ -48,29 +48,6 @@ export default function Quiz() {
     }
   }
 
-  function handleUserAnswer(
-    answer,
-    currentQuestionData,
-    currentQuestion,
-    score,
-    setSelectedAnswer,
-    setPopupOpen,
-    setScore,
-    handleButtonClick
-  ) {
-    setSelectedAnswer(answer);
-    if (
-      answer === currentQuestionData.correctAnswer ||
-      (currentQuestionData.correctAnswerTwo &&
-        currentQuestion === currentQuestionData.id)
-    ) {
-      setScore(score + 1);
-    } else {
-      setPopupOpen(true);
-    }
-    handleButtonClick(e.currentTarget);
-  }
-
   return (
     <>
       <Navbar />

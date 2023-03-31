@@ -1,6 +1,6 @@
 .titleContainer {
     position: absolute;
-    top: 10px;
+    top: 4%;
     animation: slideInFromTop .5s forwards;
     animation-delay: 3s;
     transform: translateY(-160%);
