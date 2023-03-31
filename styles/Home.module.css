@@ -5,6 +5,9 @@
     justify-content: center;
     width: 100%;
     z-index: 10;
+    animation: slideInFromBottom .5s forwards;
+    animation-delay: 3s;
+    transform: translateY(160%)
 }
 
 .main {
@@ -15,3 +18,12 @@
 .animation {
     z-index: -10;
 }
+
+@keyframes slideInFromBottom {
+    from {
+      transform: translateY(160%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
