@@ -29,6 +29,48 @@ export default function Quiz() {
     }, 300);
   };
 
+  function handlePopupTap() {
+    if (currentQuestion === questions.length - 1) {
+      if (
+        selectedAnswer === currentQuestionData.correctAnswer ||
+        selectedAnswer === currentQuestionData.correctAnswerTwo
+      ) {
+        router.push(`/results/visit-burr${score}`);
+      } else if (score === 1 || score === 6) {
+        router.push(`/results/visit-burr${score === 6 ? score - 1 : score}`);
+      } else {
+        router.push(`/results/visit-burr${score - 1}`);
+      }
+    } else {
+      setCurrentQuestion(currentQuestion + 1);
+      setSelectedAnswer(null);
+      setPopupOpen(false);
+    }
+  }
+
+  function handleUserAnswer(
+    answer,
+    currentQuestionData,
+    currentQuestion,
+    score,
+    setSelectedAnswer,
+    setPopupOpen,
+    setScore,
+    handleButtonClick
+  ) {
+    setSelectedAnswer(answer);
+    if (
+      answer === currentQuestionData.correctAnswer ||
+      (currentQuestionData.correctAnswerTwo &&
+        currentQuestion === currentQuestionData.id)
+    ) {
+      setScore(score + 1);
+    } else {
+      setPopupOpen(true);
+    }
+    handleButtonClick(e.currentTarget);
+  }
+
   return (
     <>
       <Navbar />
@@ -78,29 +120,7 @@ export default function Quiz() {
             </div>
           ))}
         </div>
-        <div
-          className={styles.popup}
-          onClick={() => {
-            if (currentQuestion === questions.length - 1) {
-              if (
-                selectedAnswer === currentQuestionData.correctAnswer ||
-                selectedAnswer === currentQuestionData.correctAnswerTwo
-              ) {
-                router.push(`/results/visit-burr${score}`);
-              } else if (score === 1) {
-                router.push(`/results/visit-burr${score}`);
-              } else if (score === 6) {
-                router.push(`/results/visit-burr${score - 1}`);
-              } else {
-                router.push(`/results/visit-burr${score - 1}`);
-              }
-            } else {
-              setCurrentQuestion(currentQuestion + 1);
-              setSelectedAnswer(null);
-              setPopupOpen(false);
-            }
-          }}
-        >
+        <div className={styles.popup} onClick={handlePopupTap}>
           {renderPopup(
             selectedAnswer,
             currentQuestionData,
