@@ -22,6 +22,13 @@ export default function Quiz() {
   const router = Router;
   const { renderPopup } = usePopup();
 
+  const handleButtonClick = (button) => {
+    button.classList.add(styles.buttonClicked);
+    setTimeout(() => {
+      button.classList.remove(styles.buttonClicked);
+    }, 300);
+  };
+
   return (
     <>
       <Navbar />
@@ -52,7 +59,7 @@ export default function Quiz() {
               <button
                 disabled={selectedAnswer}
                 className={styles.buttonBody}
-                onClick={() => {
+                onClick={(e) => {
                   setSelectedAnswer(answer);
                   if (
                     answer === currentQuestionData.correctAnswer ||
@@ -80,6 +87,7 @@ export default function Quiz() {
                   } else {
                     setPopupOpen(true);
                   }
+                  handleButtonClick(e.currentTarget);
                 }}
               >
                 {answer}

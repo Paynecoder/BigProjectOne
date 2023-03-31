@@ -58,6 +58,7 @@
 .buttonClicked {
     transition-duration: 200ms;
     color: rgb(240, 240, 240);
+    transform: translateY(10px);
     box-shadow: 0px 0px 0px #56bef7;
 }
 
