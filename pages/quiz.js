@@ -81,8 +81,9 @@ export default function Quiz() {
                 onClick={(e) => {
                   setSelectedAnswer(answer);
                   if (
-                    currentQuestionData.correctAnswerTwo &&
-                    currentQuestion === currentQuestionData.id
+                    answer === currentQuestionData.correctAnswer ||
+                    (currentQuestionData.correctAnswerTwo &&
+                      currentQuestion === currentQuestionData.id)
                   ) {
                     setScore(score + 1);
                   } else {
