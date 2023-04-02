@@ -1,9 +1,19 @@
 import "@/styles/globals.css";
 import "@/styles/variables.css";
-import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps, router }) {
+  useEffect(() => {
+    // Add a CSS class to the body element when the component mounts
+    document.body.classList.add("loading");
+
+    // Remove the CSS class once the animation has completed
+    setTimeout(() => {
+      document.body.classList.remove("loading");
+    }, 300);
+  }, []);
+
   return (
     <>
       <AnimatePresence wait>
