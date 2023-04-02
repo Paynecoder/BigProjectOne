@@ -25,20 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/quiz": [
+    "/intro": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/quiz.js"
-    ],
-    "/results/visit-burr1": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/results/visit-burr1.js"
-    ],
-    "/results/visit-burr5": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/results/visit-burr5.js"
+      "static/chunks/pages/intro.js"
     ]
   },
   "ampFirstPages": []
