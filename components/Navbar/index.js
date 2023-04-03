@@ -135,7 +135,7 @@ export default function Navbar() {
           }
 
           .nav__menuwrap.open span:nth-child(2) {
-            opacity: 0;
+            transform: scaleX(0);
           }
 
           .nav__menuwrap.open span:nth-child(3) {
