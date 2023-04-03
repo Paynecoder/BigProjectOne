@@ -3,5 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/quiz": "pages/quiz.js",
-  "/results/visit-burr5": "pages/results/visit-burr5.js"
+  "/intro": "pages/intro.js"
 }
