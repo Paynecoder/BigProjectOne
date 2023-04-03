@@ -30,7 +30,7 @@
     justify-content: center;
     width: 100%;
     z-index: 10;
-    animation: slideInFromBottom .5s forwards, pulse 3s ease-in-out infinite;
+    animation: slideInFromBottom .5s forwards;
     animation-delay: 3s;
     transform: translateY(160%);
     opacity: 0;
@@ -46,7 +46,7 @@
 }
 
 
-@keyframes pulse {
+/* @keyframes pulse {
   0% {
     transform: translateY(0);
   }
@@ -56,7 +56,7 @@
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 
 @keyframes slideInFromBottom {
