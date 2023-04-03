@@ -11,16 +11,16 @@
     top: 0px;
     font-size: 3rem;
     font-weight: 900;
-    color: var(--primary-blue);
+    color: var(--secondary-gray);
 }
 
 .titleShadow {
     z-index: -1;
     position: absolute;
-    top: 3px;
+    top: 2px;
     font-size: 3rem;
     font-weight: 900;
-    color: #56bef7;
+    color: var(--primary-gray);
 }
 
 .button {
