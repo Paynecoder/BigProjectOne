@@ -1,84 +1,75 @@
 .titleContainer {
-    position: absolute;
-    top: 4%;
-    animation: slideInFromTop .5s forwards;
-    animation-delay: 3s;
-    transform: translateY(-160%);
-    opacity: 0;
+  position: absolute;
+  top: 4%;
+  animation: slideInFromTop .5s forwards;
+  animation-delay: 3s;
+  transform: translateY(-160%);
+  opacity: 0;
 }
 
 .title {
-    top: 0px;
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--secondary-gray);
-    text-align: center;
+  top: 0px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--secondary-gray);
+  text-align: center;
 }
 
 .titleShadow {
-    z-index: -1;
-    position: absolute;
-    top: 2px;
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--primary-gray);
-    text-align: center;
+  z-index: -1;
+  position: absolute;
+  top: 2px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-gray);
+  text-align: center;
 }
 
 .button {
-    position: absolute;
-    bottom: 5%;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 10;
-    animation: slideInFromBottom .5s forwards;
-    animation-delay: 3s;
-    transform: translateY(160%);
-    opacity: 0;
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  animation: slideInFromBottom .5s forwards;
+  animation-delay: 3s;
+  transform: translateY(160%);
+  opacity: 0;
 }
 
 .main {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .animation {
-    z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
 }
 
-
-/* @keyframes pulse {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-} */
-
-
 @keyframes slideInFromBottom {
-    from {
-      transform: translateY(160%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 100%;
-    }
+  from {
+    transform: translateY(160%);
+    opacity: 0;
   }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
 
-  @keyframes slideInFromTop {
-    from {
-      transform: translateY(-160%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 100%;
-    }
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-160%);
+    opacity: 0;
   }
+  to {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
