@@ -40,6 +40,7 @@
     font-family: 'Nunito';
     width: 100%;
     padding-left: 270px;
+    cursor: pointer;
 }
 
 .animation {
@@ -54,8 +55,8 @@
     height: 1000px;
     background-color: rgb(0, 0, 0);
     position: absolute;
+    transform: translateX(-50%);
     bottom: 0px;
-    left: 0px;
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
@@ -77,4 +78,13 @@
       transform: translateY(0%);
     }
   }
+  
+
+  @media (min-width: 415px) and (min-height: 897px) {
+    /* DESKTOP CSS */
+    .fadeBG {
+      width: 800%;
+      height: 600%;
+  }
+}
   
