@@ -58,8 +58,8 @@
     }
 
     .iceberg {
-        padding: 8rem;
-        transform: scale(2);
+        padding: 4rem;
+        transform: scale(1.5);
     }
     
     .button {
