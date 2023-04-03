@@ -12,6 +12,7 @@
     font-size: 3rem;
     font-weight: 900;
     color: var(--secondary-gray);
+    text-align: center;
 }
 
 .titleShadow {
@@ -21,6 +22,7 @@
     font-size: 3rem;
     font-weight: 900;
     color: var(--primary-gray);
+    text-align: center;
 }
 
 .button {
