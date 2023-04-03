@@ -1,5 +1,6 @@
 import styles from "@/components/Navbar/Navbar.module.css";
 import bear from "@/public/Navbar/BurrFavi.svg";
+import back from "@/public/Navbar/back-arrow.svg";
 import homeico from "@/public/Navbar/home.svg";
 import quizico from "@/public/Navbar/quiz.svg";
 import tutico from "@/public/Navbar/tut.svg";
@@ -7,16 +8,19 @@ import visitico from "@/public/Navbar/visit.svg";
 import aboutico from "@/public/Navbar/about.svg";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   /** Keeps track of menu open state */
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.navwrap}>
-        <div>
-          <Image src={bear} alt="Brrrilliant Logo Bear" />
+        <div onClick={() => router.back()}>
+          <Image src={back} alt="Back Button" />
         </div>
         <div>
           <h1 className={styles.nav__title}>
