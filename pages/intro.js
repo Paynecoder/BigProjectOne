@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Intro.module.css";
 import Button from "@/components/Button/index.js";
+import ShinyButton from "@/components/ShinyButton/index.js";
 import Navbar from "@/components/Navbar";
 import Iceberg from "@/components/Iceberg";
 
