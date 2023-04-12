@@ -9,6 +9,7 @@ import aboutico from "@/public/Navbar/about.svg";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Navbar() {
   /** Keeps track of menu open state */
@@ -49,11 +50,15 @@ export default function Navbar() {
         <ul>
           <li>
             <Image src={homeico} />
-            <span>Home</span>
+            <Link href="/">
+              <span>Home</span>
+            </Link>
           </li>
           <li>
             <Image src={quizico} />
-            <span>Quiz</span>
+            <Link href="/quiz">
+              <span>Quiz</span>
+            </Link>
           </li>
           <li>
             <Image src={tutico} />
