@@ -1,8 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/intro": "pages/intro.js",
-  "/results/visit-burr5": "pages/results/visit-burr5.js",
-  "/quiz": "pages/quiz.js"
+  "/_error": "pages/_error.js",
+  "/quiz": "pages/quiz.js",
+  "/": "pages/index.js",
+  "/intro": "pages/intro.js"
 }

@@ -1,6 +1,6 @@
 import styles from "@/components/Navbar/Navbar.module.css";
 import bear from "@/public/Navbar/BurrFavi.svg";
-import back from "@/public/Navbar/back-arrow.svg";
+import arrow from "@/public/icons/misc/rotate-left-solid.svg";
 import homeico from "@/public/Navbar/home.svg";
 import quizico from "@/public/Navbar/quiz.svg";
 import tutico from "@/public/Navbar/tut.svg";
@@ -19,8 +19,16 @@ export default function Navbar() {
   return (
     <>
       <div className={styles.navwrap}>
-        <div onClick={() => router.back()}>
-          <Image src={back} alt="Back Button" />
+        <div
+          onClick={() => {
+            if (router.pathname === "/") {
+              router.reload();
+            } else {
+              router.back();
+            }
+          }}
+        >
+          <Image src={arrow} alt="Back Button" width={50} />
         </div>
         <div>
           <h1 className={styles.nav__title}>
