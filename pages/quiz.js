@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar/index.js";
 import Image from "next/image";
 import Router from "next/router";
 import usePopup from "@/hooks/usePopup";
+import { useAnswers } from "@/hooks/answerContext";
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -21,6 +22,7 @@ export default function Quiz() {
 
   const router = Router;
   const { renderPopup } = usePopup();
+  const { answers, updateAnswers } = useAnswers();
 
   const handleButtonClick = (button) => {
     button.classList.add(styles.buttonClicked);
@@ -80,6 +82,7 @@ export default function Quiz() {
                 className={styles.buttonBody}
                 onClick={(e) => {
                   setSelectedAnswer(answer);
+                  updateAnswers({ questionId: currentQuestionData.id, answer });
                   if (
                     answer === currentQuestionData.correctAnswer ||
                     (currentQuestionData.correctAnswerTwo &&
