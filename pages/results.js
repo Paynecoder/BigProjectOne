@@ -10,19 +10,19 @@ export default function Results() {
   function getImage(score) {
     switch (score) {
       case 0:
-        return "/results/1.png";
+        return "/icons/results/burr1.svg";
       case 1:
-        return "/results/1.png";
+        return "/icons/results/burr1.svg";
       case 2:
-        return "/results/2.png";
+        return "/icons/results/burr2.svg";
       case 3:
-        return "/results/3.png";
+        return "/icons/results/burr3.svg";
       case 4:
-        return "/results/4.png";
+        return "/icons/results/burr4.svg";
       case 5:
-        return "/results/5.png";
+        return "/icons/results/burr5.svg";
       default:
-        return "/results/1.png";
+        return "/iconsresults/burr1.svg";
     }
   }
 

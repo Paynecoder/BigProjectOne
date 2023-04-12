@@ -10,8 +10,9 @@ export const questions = [
       "Perfect, keep it up! My friends and I appreciate you for your hard work!",
     badFeedback:
       "If you don’t recycle your containers, they end up in my home! ",
-    isRight: "true",
-    isWrong: "false",
+    isRight: "Good job recycling! You are a true friend to the environment.",
+    isWrong:
+      "Once you start recycling containers, you'll help the environment bottle by bottle!",
   },
   {
     id: 1,
@@ -24,8 +25,9 @@ export const questions = [
       "Great work! The world needs more people like you. You are an inspiration.",
     badFeedback:
       "Consider the way litter affects nature. Some poor animals could end up trying to eat it!",
-    isRight: "true",
-    isWrong: "false",
+    isRight:
+      "Awesome job picking up litter! You are contributing to a cleaner world.",
+    isWrong: "Uh oh! You should always pick up litter when you see it.",
   },
   {
     id: 2,
@@ -39,8 +41,8 @@ export const questions = [
       "Awesome! Being energy-efficient is one of the best ways you can help to save the world!",
     badFeedback:
       "Greenhouse gases are the primary cause of global warming. Be careful! ",
-    isRight: "true",
-    isWrong: "false",
+    isRight: "Thank you for being environmentally friendly when possible!",
+    isWrong: "Maybe you should consider walking or biking on a nice day!",
   },
   {
     id: 3,
@@ -54,8 +56,9 @@ export const questions = [
       "Nice! It’s always a good idea to conserve energy wherever you can. Keep it up!",
     badFeedback:
       "Remember to be mindful of your energy usage. That stuff adds up quick!",
-    isRight: "true",
-    isWrong: "false",
+    isRight:
+      "Thank you for being energy efficient! Turning off the lights helps the environment AND the electric bill!",
+    isWrong: "You should turn off lights and devices when you leave your home.",
   },
   {
     id: 4,
@@ -68,7 +71,7 @@ export const questions = [
       "Woohoo! Properly disposing of food helps nature to flourish and grow!",
     badFeedback:
       "Naturally disposing of your food scraps is an easy way to give back to nature.",
-    isRight: "true",
-    isWrong: "false",
+    isRight: "Great job composting! You are helping the environment!",
+    isWrong: "You should consider composting your food scraps.",
   },
 ];
