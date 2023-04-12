@@ -72,8 +72,8 @@ export default function Results() {
     <div className={styles.main}>
       <Image src={imagesrc} width={230} height={300} />
       <h1>{title}</h1>
+      <h2>Score: {score}</h2>
       <p>{desc}</p>
-      <h1>Score: {score}</h1>
       {score === 0 && <h2>Take the quiz!</h2>}
       {answers.map((answer, index) => {
         const question = questions.find((q) => q.id === answer.questionId);
