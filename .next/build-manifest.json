@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/quiz.js"
     ],
-    "/results": [
+    "/visitburr": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/results.js"
+      "static/chunks/pages/visitburr.js"
     ]
   },
   "ampFirstPages": []

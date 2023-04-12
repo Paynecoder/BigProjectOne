@@ -4,6 +4,8 @@ import { questions } from "../data/questions.js";
 import Button from "../components/Button/index.js";
 import Image from "next/image";
 import down from "@/public/icons/misc/caret-down-solid.svg";
+import right from "@/public/icons/misc/check-solid.svg";
+import wrong from "@/public/icons/misc/xmark-solid.svg";
 
 export default function Results() {
   const { answers, score } = useAnswers();
@@ -105,8 +107,11 @@ export default function Results() {
             answer.answer === question.correctAnswerTwo;
 
           return (
-            <div key={index}>
-              <h3 className={styles.qtitle}>{question.title}</h3>
+            <div key={index} className={styles.mwrap}>
+              <div className={styles.qwrap}>
+                <h3 className={styles.qtitle}>{question.title}</h3>
+                <Image src={isCorrect ? right : wrong} width={25} />
+              </div>
               <p className={styles.qfeed}>
                 {isCorrect ? question.isRight : question.isWrong}
               </p>

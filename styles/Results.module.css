@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    height: 180vh;
+    height: 200vh;
     padding: 2em;
     margin-top: 2em;
 }
@@ -77,6 +77,18 @@
 
 .scroll > img {
     animation: hover 2s infinite;
+}
+
+.mwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+.qwrap {
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
 }
 
 @keyframes hover {
