@@ -5,6 +5,7 @@ import animationfour from "@/public/lottie/visit-burr-4.json";
 import animationfive from "@/public/lottie/visit-burr-5.json";
 import Lottie from "lottie-react";
 import { useAnswers } from "@/hooks/answerContext";
+import Button from "@/components/Button";
 
 export default function VisitBurrOne() {
   const { score } = useAnswers();
@@ -12,7 +13,7 @@ export default function VisitBurrOne() {
   function findAnim(score) {
     switch (score) {
       case 0:
-        return animationfive;
+        return;
       case 1:
         return animationfive;
       case 2:
@@ -37,15 +38,30 @@ export default function VisitBurrOne() {
       <main
         style={{
           overflow: "hidden",
+          height: "100vh",
+          display: "grid",
+          placeItems: "center",
         }}
       >
-        <Lottie
-          animationData={anim}
-          loop={true}
-          onComplete={() => {
-            console.log("Animation complete");
-          }}
-        />
+        {score > 0 && (
+          <div
+            style={{
+              overflow: "hidden",
+              height: "100vh",
+            }}
+          >
+            <Lottie
+              animationData={anim}
+              loop={true}
+              onComplete={() => {
+                console.log("Animation complete");
+              }}
+            />
+          </div>
+        )}
+        {score === 0 && (
+          <Button word={"Take the quiz to visit Burr!"} route={"/quiz"} />
+        )}
       </main>
     </>
   );
