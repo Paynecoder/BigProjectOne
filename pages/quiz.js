@@ -22,7 +22,7 @@ export default function Quiz() {
 
   const router = Router;
   const { renderPopup } = usePopup();
-  const { answers, updateAnswers } = useAnswers();
+  const { answers, updateAnswers, updateScore } = useAnswers();
 
   const handleButtonClick = (button) => {
     button.classList.add(styles.buttonClicked);
@@ -37,11 +37,11 @@ export default function Quiz() {
         selectedAnswer === currentQuestionData.correctAnswer ||
         selectedAnswer === currentQuestionData.correctAnswerTwo
       ) {
-        router.push(`/results/visit-burr${score}`);
+        router.push(`/results`);
       } else if (score === 1 || score === 6) {
-        router.push(`/results/visit-burr${score === 6 ? score - 1 : score}`);
+        router.push(`/results/`);
       } else {
-        router.push(`/results/visit-burr${score - 1}`);
+        router.push(`/results`);
       }
     } else {
       setCurrentQuestion(currentQuestion + 1);
@@ -88,7 +88,7 @@ export default function Quiz() {
                     (currentQuestionData.correctAnswerTwo &&
                       currentQuestion === currentQuestionData.id)
                   ) {
-                    setScore(score + 1);
+                    updateScore();
                   } else {
                     setPopupOpen(true);
                   }

@@ -10,6 +10,8 @@ export const questions = [
       "Perfect, keep it up! My friends and I appreciate you for your hard work!",
     badFeedback:
       "If you don’t recycle your containers, they end up in my home! ",
+    isRight: "true",
+    isWrong: "false",
   },
   {
     id: 1,
@@ -22,6 +24,8 @@ export const questions = [
       "Great work! The world needs more people like you. You are an inspiration.",
     badFeedback:
       "Consider the way litter affects nature. Some poor animals could end up trying to eat it!",
+    isRight: "true",
+    isWrong: "false",
   },
   {
     id: 2,
@@ -35,6 +39,8 @@ export const questions = [
       "Awesome! Being energy-efficient is one of the best ways you can help to save the world!",
     badFeedback:
       "Greenhouse gases are the primary cause of global warming. Be careful! ",
+    isRight: "true",
+    isWrong: "false",
   },
   {
     id: 3,
@@ -48,6 +54,8 @@ export const questions = [
       "Nice! It’s always a good idea to conserve energy wherever you can. Keep it up!",
     badFeedback:
       "Remember to be mindful of your energy usage. That stuff adds up quick!",
+    isRight: "true",
+    isWrong: "false",
   },
   {
     id: 4,
@@ -60,5 +68,7 @@ export const questions = [
       "Woohoo! Properly disposing of food helps nature to flourish and grow!",
     badFeedback:
       "Naturally disposing of your food scraps is an easy way to give back to nature.",
+    isRight: "true",
+    isWrong: "false",
   },
 ];

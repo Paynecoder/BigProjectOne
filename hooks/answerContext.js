@@ -9,6 +9,7 @@ export function useAnswers() {
 
 export function AnswersProvider({ children }) {
   const [answers, setAnswers] = useState([]);
+  const [score, setScore] = useState(0);
   const router = useRouter();
 
   const updateAnswers = (answer) => {
@@ -17,15 +18,14 @@ export function AnswersProvider({ children }) {
     }
   };
 
-  useEffect(() => {
-    if (router.pathname != "/quiz" || router.pathname != "/results") {
-      setAnswers([]);
-    } else {
-    }
-  }, [router.pathname]);
+  const updateScore = () => {
+    setScore((prevScore) => prevScore + 1);
+  };
 
   return (
-    <AnswersContext.Provider value={{ answers, updateAnswers }}>
+    <AnswersContext.Provider
+      value={{ answers, updateAnswers, updateScore, score }}
+    >
       {children}
     </AnswersContext.Provider>
   );
