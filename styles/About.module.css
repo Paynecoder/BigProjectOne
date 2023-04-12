@@ -1,20 +1,24 @@
  .main {
-  padding: 1em;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  gap: 2.5em;
  }
  
  .title_head {
     text-align: center;
-    margin-top: 30px;
     color: var(--primary-gray);
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 900;
+    margin-top: 2em;
   }
   .team_member {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 70px;
     margin-bottom: 40px;
   }
 
@@ -28,12 +32,13 @@
 
   .team_member h3 {
     color: var(--primary-gray);
-    font-size: 24px;
+    font-size: 13px;
+    font-weight: 900;
     margin: 0;
   }
 
   .team_member p {
-    font-size: 18px;
+    font-size: 13px;
     margin: 10px 0;
     color: var(--secondary-gray);
   }
