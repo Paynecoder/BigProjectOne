@@ -70,11 +70,17 @@ export default function Results() {
 
   return (
     <div className={styles.main}>
-      <Image src={imagesrc} width={230} height={300} />
-      <h1>{title}</h1>
-      <h2>Score: {score}</h2>
-      <p>{desc}</p>
-      {score === 0 && <h2>Take the quiz!</h2>}
+      <Image
+        src={imagesrc}
+        width={230}
+        height={300}
+        style={{
+          marginBottom: "20px",
+        }}
+      />
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.desc}>{desc}</p>
+      {score === 0 && <Button word={"Try the Quiz!"} route={"/quiz"} />}
       {answers.map((answer, index) => {
         const question = questions.find((q) => q.id === answer.questionId);
         const isCorrect =
@@ -83,8 +89,10 @@ export default function Results() {
 
         return (
           <div key={index}>
-            <h3>{question.title}</h3>
-            <p>{isCorrect ? question.isRight : question.isWrong}</p>
+            <h3 className={styles.qtitle}>{question.title}</h3>
+            <p className={styles.qfeed}>
+              {isCorrect ? question.isRight : question.isWrong}
+            </p>
           </div>
         );
       })}

@@ -1,11 +1,42 @@
 .main {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
-    margin-top: 4em;
-   height: 120vh;
-   gap: 2em;
-   padding: 3em;
-   margin-bottom: 10px;
-   height: 82em;
+    height: 175vh;
+    gap: 2em;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+
+.title {
+    font-family: 'Nunito';
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--primary-gray);
+    text-align: center;
+}
+
+.desc {
+    font-size: 24px;
+    font-family: 'Nunito';
+    font-weight: 400;
+    color: var(--secondary-gray);
+    text-align: center;
+}
+
+.qtitle {
+    font-size: 24px;
+    font-family: 'Nunito';
+    font-weight: 900;
+    color: var(--primary-gray);
+
+}
+
+.qfeed {
+    font-size: 18px;
+    font-family: 'Nunito';
+    font-weight: 400;
+    color: var(--secondary-gray)
 }
