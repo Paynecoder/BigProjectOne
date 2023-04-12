@@ -23,6 +23,8 @@ export default function VisitBurrOne() {
         return animationtwo;
       case 5:
         return animationone;
+      case 6:
+        return animationone;
       default:
         return animationfive;
     }

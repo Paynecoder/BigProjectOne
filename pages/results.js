@@ -22,6 +22,8 @@ export default function Results() {
         return "/icons/results/burr4.svg";
       case 5:
         return "/icons/results/burr5.svg";
+      case 6:
+        return "/icons/results/burr5.svg";
       default:
         return "/iconsresults/burr1.svg";
     }
@@ -41,6 +43,8 @@ export default function Results() {
         return "You're doing Great!";
       case 5:
         return "You're a hero!";
+      case 6:
+        return "You're a hero!";
       default:
         return "Take the Quiz to find out!";
     }
@@ -59,6 +63,8 @@ export default function Results() {
       case 4:
         return "Well done! Your actions to live sustainably and protect the environment are truly inspiring. By reducing your carbon footprint, you are helping to save the polar bears and keep our planet healthy for future generations.";
       case 5:
+        return "Congratulations on being a hero in the fight against climate change! Your actions towards a more sustainable lifestyle are making a real difference and helping to save our planet, including the precious polar bears. Keep up the great work!";
+      case 6:
         return "Congratulations on being a hero in the fight against climate change! Your actions towards a more sustainable lifestyle are making a real difference and helping to save our planet, including the precious polar bears. Keep up the great work!";
       default:
         return "Take the Quiz to find out!";
