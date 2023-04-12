@@ -3,6 +3,7 @@ import { useAnswers } from "@/hooks/answerContext";
 import { questions } from "../data/questions.js";
 import Button from "../components/Button/index.js";
 import Image from "next/image";
+import down from "@/public/icons/misc/caret-down-solid.svg";
 
 export default function Results() {
   const { answers, score } = useAnswers();
@@ -78,28 +79,37 @@ export default function Results() {
           marginBottom: "20px",
         }}
       />
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.desc}>{desc}</p>
+      <h2>Score: {score}</h2>
+      <div className={styles.rtext}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.desc}>{desc}</p>
+      </div>
+      {score > 0 && (
+        <div className={styles.scroll}>
+          <p>Scroll to See Your Results!</p>
+          <Image src={down} width={25} />
+        </div>
+      )}
       {score === 0 && <Button word={"Try the Quiz!"} route={"/quiz"} />}
-      {answers.map((answer, index) => {
-        const question = questions.find((q) => q.id === answer.questionId);
-        const isCorrect =
-          answer.answer === question.correctAnswer ||
-          answer.answer === question.correctAnswerTwo;
+      <div className={styles.reswrap}>
+        {answers.map((answer, index) => {
+          const question = questions.find((q) => q.id === answer.questionId);
+          const isCorrect =
+            answer.answer === question.correctAnswer ||
+            answer.answer === question.correctAnswerTwo;
 
-        return (
-          <div key={index}>
-            <h3 className={styles.qtitle}>{question.title}</h3>
-            <p className={styles.qfeed}>
-              {isCorrect ? question.isRight : question.isWrong}
-            </p>
-          </div>
-        );
-      })}
+          return (
+            <div key={index}>
+              <h3 className={styles.qtitle}>{question.title}</h3>
+              <p className={styles.qfeed}>
+                {isCorrect ? question.isRight : question.isWrong}
+              </p>
+            </div>
+          );
+        })}
+      </div>
       <div>
-        {score > 0 && (
-          <Button word={"Visit Burr!"} route={`/results/visit-burr${score}`} />
-        )}
+        {score > 0 && <Button word={"Visit Burr!"} route={`/visitburr`} />}
       </div>
     </div>
   );

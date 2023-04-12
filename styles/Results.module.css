@@ -3,14 +3,13 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    height: 175vh;
-    gap: 2em;
+    height: 180vh;
     padding: 2em;
     margin-top: 2em;
 }
 
 
-.title {
+.rtext > .title {
     font-family: 'Nunito';
     font-weight: 900;
     font-size: 48px;
@@ -18,7 +17,7 @@
     text-align: center;
 }
 
-.desc {
+.rtext > .desc {
     font-size: 24px;
     font-family: 'Nunito';
     font-weight: 400;
@@ -39,4 +38,55 @@
     font-family: 'Nunito';
     font-weight: 400;
     color: var(--secondary-gray)
+}
+
+.reswrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.rtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+.scroll > p {
+    font-size: 18px;
+    font-family: 'Nunito';
+    font-weight: 900;
+    color: var(--primary-gray);
+    text-align: center;
+}
+
+.scroll > img {
+    animation: hover 2s infinite;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

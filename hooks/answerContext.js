@@ -10,7 +10,6 @@ export function useAnswers() {
 export function AnswersProvider({ children }) {
   const [answers, setAnswers] = useState([]);
   const [score, setScore] = useState(0);
-  const router = useRouter();
 
   const updateAnswers = (answer) => {
     if (answer !== null) {

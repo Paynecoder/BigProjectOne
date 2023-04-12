@@ -48,27 +48,48 @@ export default function Navbar() {
       </div>
       <aside className={`side-menu ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li>
+          <li
+            onClick={() => {
+              router.push("/");
+              setMenuOpen(false);
+            }}
+          >
             <Image src={homeico} />
-            <Link href="/">
-              <span>Home</span>
-            </Link>
+            <span>Home</span>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              router.push("/quiz");
+              setMenuOpen(false);
+            }}
+          >
             <Image src={quizico} />
-            <Link href="/quiz">
-              <span>Quiz</span>
-            </Link>
+            <span>Quiz</span>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              router.push("/tutorial");
+              setMenuOpen(false);
+            }}
+          >
             <Image src={tutico} />
             <span>Tutorial</span>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              router.push("/visitburr");
+              setMenuOpen(false);
+            }}
+          >
             <Image src={visitico} />
             <span>Visit Burr</span>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              router.push("/about");
+              setMenuOpen(false);
+            }}
+          >
             <Image src={aboutico} />
             <span>About</span>
           </li>

@@ -1,8 +1,9 @@
-
-
-
-  
-  .title_head {
+ .main {
+  padding: 1em;
+  height: 100vh;
+ }
+ 
+ .title_head {
     text-align: center;
     margin-top: 30px;
     color: var(--primary-gray);
