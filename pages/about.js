@@ -40,7 +40,7 @@ export default function About() {
               Meet Carter, the UX/UI Enchanter who mesmerizes with seamless
               navigation and delightful user experiences. With a flick of his
               wand (and a dash of user feedback), Carter ensures that your
-              language learning journey is as intuitive as it is enjoyable.
+              journey is as intuitive as it is enjoyable.
             </p>
           </div>
         </div>
