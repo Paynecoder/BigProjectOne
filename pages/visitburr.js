@@ -6,7 +6,6 @@ import animationfive from "@/public/lottie/visit-burr-5.json";
 import Lottie from "lottie-react";
 import { useAnswers } from "@/hooks/answerContext";
 import Button from "@/components/Button";
-import styles from "../styles/VisitBurr.module.css";
 import down from "@/public/icons/misc/caret-down-solid.svg";
 import Image from "next/image";
 
