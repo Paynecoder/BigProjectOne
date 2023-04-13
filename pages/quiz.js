@@ -20,9 +20,13 @@ export default function Quiz() {
     console.log(score);
   }, [currentQuestion]);
 
+  useEffect(() => {
+    resetUser();
+  }, []);
+
   const router = Router;
   const { renderPopup } = usePopup();
-  const { answers, updateAnswers, updateScore } = useAnswers();
+  const { answers, updateAnswers, updateScore, resetUser } = useAnswers();
 
   const handleButtonClick = (button) => {
     button.classList.add(styles.buttonClicked);

@@ -17,13 +17,18 @@ export function AnswersProvider({ children }) {
     }
   };
 
+  const resetUser = () => {
+    setAnswers([]);
+    setScore(0);
+  };
+
   const updateScore = () => {
     setScore((prevScore) => prevScore + 1);
   };
 
   return (
     <AnswersContext.Provider
-      value={{ answers, updateAnswers, updateScore, score }}
+      value={{ answers, updateAnswers, updateScore, score, resetUser }}
     >
       {children}
     </AnswersContext.Provider>

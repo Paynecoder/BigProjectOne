@@ -1,7 +1,7 @@
 import styles from "../styles/Results.module.css";
 import { useAnswers } from "@/hooks/answerContext";
 import { questions } from "../data/questions.js";
-import Button from "../components/Button/index.js";
+import ShinyButton from "@/components/ShinyButton";
 import Image from "next/image";
 import down from "@/public/icons/misc/caret-down-solid.svg";
 import right from "@/public/icons/misc/check-solid.svg";
@@ -120,7 +120,7 @@ export default function Results() {
         })}
       </div>
       <div>
-        {score > 0 && <Button word={"Visit Burr!"} route={`/visitburr`} />}
+        {score > 0 && <ShinyButton word={"Visit Burr!"} route={`/visitburr`} />}
       </div>
     </div>
   );
