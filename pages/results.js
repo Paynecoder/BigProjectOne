@@ -116,6 +116,7 @@ export default function Results() {
               <p className={styles.qfeed}>
                 {isCorrect ? question.isRight : question.isWrong}
               </p>
+              <p className={styles.qres}>{!isCorrect && question.resources}</p>
             </div>
           );
         })}
