@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { useRouter } from "next/router";
 
 const AnswersContext = createContext();
 
@@ -25,10 +24,15 @@ export function AnswersProvider({ children }) {
   const updateScore = () => {
     setScore((prevScore) => prevScore + 1);
   };
-
   return (
     <AnswersContext.Provider
-      value={{ answers, updateAnswers, updateScore, score, resetUser }}
+      value={{
+        answers,
+        updateAnswers,
+        updateScore,
+        score,
+        resetUser,
+      }}
     >
       {children}
     </AnswersContext.Provider>

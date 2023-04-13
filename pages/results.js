@@ -7,6 +7,7 @@ import down from "@/public/icons/misc/caret-down-solid.svg";
 import right from "@/public/icons/misc/check-solid.svg";
 import wrong from "@/public/icons/misc/xmark-solid.svg";
 import Button from "@/components/Button";
+import Navbar from "@/components/Navbar";
 
 export default function Results() {
   const { answers, score } = useAnswers();
@@ -79,51 +80,58 @@ export default function Results() {
   const desc = getDesc(score);
 
   return (
-    <div className={styles.main}>
-      <Image
-        src={imagesrc}
-        width={230}
-        height={300}
-        style={{
-          marginBottom: "20px",
-        }}
-      />
-      <h2>Score: {score}</h2>
-      <div className={styles.rtext}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.desc}>{desc}</p>
-      </div>
-      {score > 0 && (
-        <div className={styles.scroll}>
-          <p>Scroll to See Your Results!</p>
-          <Image src={down} width={25} />
+    <main>
+      <Navbar />
+      <div className={styles.main}>
+        <Image
+          src={imagesrc}
+          width={230}
+          height={300}
+          style={{
+            marginBottom: "20px",
+          }}
+        />
+        <h2>Score: {score}</h2>
+        <div className={styles.rtext}>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.desc}>{desc}</p>
         </div>
-      )}
-      {score === 0 && <Button word={"Try the Quiz!"} route={"/quiz"} />}
-      <div className={styles.reswrap}>
-        {answers.map((answer, index) => {
-          const question = questions.find((q) => q.id === answer.questionId);
-          const isCorrect =
-            answer.answer === question.correctAnswer ||
-            answer.answer === question.correctAnswerTwo;
+        {score > 0 && (
+          <div className={styles.scroll}>
+            <p>Scroll to See Your Results!</p>
+            <Image src={down} width={25} />
+          </div>
+        )}
+        {score === 0 && <Button word={"Try the Quiz!"} route={"/quiz"} />}
+        <div className={styles.reswrap}>
+          {answers.map((answer, index) => {
+            const question = questions.find((q) => q.id === answer.questionId);
+            const isCorrect =
+              answer.answer === question.correctAnswer ||
+              answer.answer === question.correctAnswerTwo;
 
-          return (
-            <div key={index} className={styles.mwrap}>
-              <div className={styles.qwrap}>
-                <h3 className={styles.qtitle}>{question.title}</h3>
-                <Image src={isCorrect ? right : wrong} width={25} />
+            return (
+              <div key={index} className={styles.mwrap}>
+                <div className={styles.qwrap}>
+                  <h3 className={styles.qtitle}>{question.title}</h3>
+                  <Image src={isCorrect ? right : wrong} width={25} />
+                </div>
+                <p className={styles.qfeed}>
+                  {isCorrect ? question.isRight : question.isWrong}
+                </p>
+                <p className={styles.qres}>
+                  {!isCorrect && question.resources}
+                </p>
               </div>
-              <p className={styles.qfeed}>
-                {isCorrect ? question.isRight : question.isWrong}
-              </p>
-              <p className={styles.qres}>{!isCorrect && question.resources}</p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <div>
+          {score > 0 && (
+            <ShinyButton word={"Visit Burr!"} route={`/visitburr`} />
+          )}
+        </div>
       </div>
-      <div>
-        {score > 0 && <ShinyButton word={"Visit Burr!"} route={`/visitburr`} />}
-      </div>
-    </div>
+    </main>
   );
 }
