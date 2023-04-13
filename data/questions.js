@@ -13,6 +13,7 @@ export const questions = [
     isRight: "Good job recycling! You are a true friend to the environment.",
     isWrong:
       "Once you start recycling containers, you'll help the environment bottle by bottle!",
+    resources: "",
   },
   {
     id: 1,
@@ -28,6 +29,7 @@ export const questions = [
     isRight:
       "Awesome job picking up litter! You are contributing to a cleaner world.",
     isWrong: "Uh oh! You should always pick up litter when you see it.",
+    resources: "",
   },
   {
     id: 2,
@@ -43,6 +45,7 @@ export const questions = [
       "Greenhouse gases are the primary cause of global warming. Be careful! ",
     isRight: "Thank you for being environmentally friendly when possible!",
     isWrong: "Maybe you should consider walking or biking on a nice day!",
+    resources: "",
   },
   {
     id: 3,
@@ -59,6 +62,7 @@ export const questions = [
     isRight:
       "Thank you for being energy efficient! Turning off the lights helps the environment AND the electric bill!",
     isWrong: "You should turn off lights and devices when you leave your home.",
+    resources: "",
   },
   {
     id: 4,
@@ -73,5 +77,6 @@ export const questions = [
       "Naturally disposing of your food scraps is an easy way to give back to nature.",
     isRight: "Great job composting! You are helping the environment!",
     isWrong: "You should consider composting your food scraps.",
+    resources: "",
   },
 ];
