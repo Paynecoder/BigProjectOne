@@ -6,6 +6,7 @@ import Image from "next/image";
 import down from "@/public/icons/misc/caret-down-solid.svg";
 import right from "@/public/icons/misc/check-solid.svg";
 import wrong from "@/public/icons/misc/xmark-solid.svg";
+import Button from "@/components/Button";
 
 export default function Results() {
   const { answers, score } = useAnswers();
