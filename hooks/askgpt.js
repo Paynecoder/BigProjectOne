@@ -9,6 +9,8 @@ export default function askGpt() {
   });
 
   const openai = new OpenAIApi(config);
+  
+  console.log("API Key:", process.env.NEXT_PUBLIC_OPENAI_APIKEY);
 
   async function askBurr(prompt) {
     const completion = await openai.createChatCompletion({
