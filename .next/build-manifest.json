@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/visitburr": [
+    "/askburr": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/visitburr.js"
+      "static/chunks/pages/askburr.js"
     ]
   },
   "ampFirstPages": []
