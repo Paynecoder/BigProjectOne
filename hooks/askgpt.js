@@ -1,6 +1,10 @@
 import { Configuration, OpenAIApi } from "openai";
+import { useState } from "react";
 
 export default function askGpt() {
+  const [prompt, setPrompt] = useState("");
+  const [response, setResponse] = useState("");
+
   const config = new Configuration({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_APIKEY,
     headers: {
@@ -33,5 +37,5 @@ export default function askGpt() {
     return completion.data.choices[0].message.content;
   }
 
-  return { askBurr };
+  return { askBurr, prompt, setPrompt, response, setResponse };
 }

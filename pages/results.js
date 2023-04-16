@@ -90,6 +90,7 @@ export default function Results() {
           style={{
             marginBottom: "20px",
           }}
+          alt="image"
         />
         <h2>Score: {score}</h2>
         <div className={styles.rtext}>
@@ -99,7 +100,7 @@ export default function Results() {
         {score > 0 && (
           <div className={styles.scroll}>
             <p>Scroll to See Your Results!</p>
-            <Image src={down} width={25} />
+            <Image src={down} width={25} alt="image" />
           </div>
         )}
         {score === 0 && <Button word={"Try the Quiz!"} route={"/quiz"} />}
@@ -114,7 +115,11 @@ export default function Results() {
               <div key={index} className={styles.mwrap}>
                 <div className={styles.qwrap}>
                   <h3 className={styles.qtitle}>{question.title}</h3>
-                  <Image src={isCorrect ? right : wrong} width={25} />
+                  <Image
+                    src={isCorrect ? right : wrong}
+                    width={25}
+                    alt="image"
+                  />
                 </div>
                 <p className={styles.qfeed}>
                   {isCorrect ? question.isRight : question.isWrong}

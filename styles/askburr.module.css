@@ -4,4 +4,111 @@
     align-items: center;
     flex-direction: column;
     gap: 1em;
+    margin-top: 1em;
+}
+
+.title {
+    color: var(--primary-gray);
+    font-family: 'Nunito';
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5;
+}
+
+.desc {
+    font-family: "Nunito";
+    font-weight: 500;
+    color: var(--secondary-gray);
+    font-size: 24px;
+    width: 100%;
+}
+
+.chatbox {
+    position: absolute;
+    bottom: 0;
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 560px;
+    border-radius: 31px 31px 0 0;
+    padding-left: 1.5em;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.burrgreet {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.greetbubble {
+    background-color: #24CF16;
+    opacity: 50%;
+    width: 200px;
+    border-radius: 5px;
+    text-align: left;
+    color: black;
+    font-family: 'Nunito';
+    font-size: 18px;
+    min-height: 40px;
+    padding: 0.5em;
+}
+
+.fieldwrap {
+    position: fixed;
+    bottom: 5%;
+}
+.usrquestion {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-left: 6em;
+}
+
+.promptbubble {
+    background-color: var(--secondary-blue);
+    width: 200px;
+    border-radius: 5px;
+    text-align: left;
+    color: black;
+    font-family: 'Nunito';
+    font-size: 18px;
+    min-height: 40px;
+    padding: 0.5em;
+}
+
+.pfp {
+    background-color: var(--primary-gray);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.response {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.responsebubble {
+    background-color: #24CF16;
+    opacity: 50%;
+    width: 200px;
+    border-radius: 5px;
+    text-align: left;
+    color: black;
+    font-family: 'Nunito';
+    font-size: 18px;
+    min-height: 40px;
+    padding: 0.5em;
 }

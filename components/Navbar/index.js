@@ -54,7 +54,7 @@ export default function Navbar() {
               setMenuOpen(false);
             }}
           >
-            <Image src={homeico} />
+            <Image src={homeico} alt="home" />
             <span>Home</span>
           </li>
           <li
@@ -63,7 +63,7 @@ export default function Navbar() {
               setMenuOpen(false);
             }}
           >
-            <Image src={quizico} />
+            <Image src={quizico} alt="quiz" />
             <span>Quiz</span>
           </li>
           <li
@@ -72,7 +72,7 @@ export default function Navbar() {
               setMenuOpen(false);
             }}
           >
-            <Image src={tutico} />
+            <Image src={tutico} alt="tut" />
             <span>Tutorial</span>
           </li>
           <li
@@ -81,7 +81,7 @@ export default function Navbar() {
               setMenuOpen(false);
             }}
           >
-            <Image src={visitico} />
+            <Image src={visitico} alt="visit" />
             <span>Visit Burr</span>
           </li>
           <li
@@ -90,11 +90,11 @@ export default function Navbar() {
               setMenuOpen(false);
             }}
           >
-            <Image src={aboutico} />
+            <Image src={aboutico} alt="about" />
             <span>About</span>
           </li>
         </ul>
-        <Image src={bear} className={styles.menu__bear} />
+        <Image src={bear} className={styles.menu__bear} alt="bear" />
       </aside>
       <style jsx>
         {`
