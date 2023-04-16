@@ -6,27 +6,29 @@ import burr from "@/public/favicon.svg";
 import penguin from "@/public/icons/misc/penguin-pfp.svg";
 import Image from "next/image.js";
 import SendField from "@/components/SendField/index.js";
+import Loader from "@/components/Loader/index.js";
 
 export default function askBurr() {
   const {
     askBurr,
-    prompt,
     setPrompt,
-    response,
     setResponse,
     messagesRemaining,
     setMessagesRemaining,
+    chat,
+    setChat,
   } = askGpt();
   const [loading, setLoading] = useState(false);
 
   const handleUserInput = async (input) => {
     setPrompt(input);
+    setLoading(true);
     if (messagesRemaining > 0) {
       setMessagesRemaining(messagesRemaining - 1);
-      setLoading(!loading);
       const newResponse = await askBurr(input);
+      setChat([...chat, { prompt: input, response: newResponse }]);
       setResponse(newResponse);
-      setLoading(!loading);
+      setLoading(false);
     } else {
       alert("No Tokens");
     }
@@ -50,23 +52,28 @@ export default function askBurr() {
               Hi, I'm Burr! Ask me a question about the environment!
             </div>
           </div>
-          {prompt != "" && (
-            <div className={styles.usrquestion}>
-              <div className={styles.promptbubble}>{prompt}</div>
-              <Image src={penguin} width={50} alt="user pfp" />
+          {chat.map((message, index) => (
+            <div key={index} className={styles.gptwrap}>
+              <div className={styles.usrquestion}>
+                <div className={styles.promptbubble}>{message.prompt}</div>
+                <Image src={penguin} width={50} alt="user pfp" />
+              </div>
+              <div className={styles.response}>
+                <Image src={burr} width={50} alt="burr pfp" />
+                <div className={styles.responsebubble}>{message.response}</div>
+              </div>
             </div>
-          )}
-          {response != "" && (
-            <div className={styles.response}>
-              <Image src={burr} width={50} alt="burr pfp" />
-              <div className={styles.responsebubble}>{response}</div>
-            </div>
-          )}
+          ))}
         </div>
         <div className={styles.fieldwrap}>
           <SendField onSend={handleUserInput} />
           <div className={styles.bg}></div>
         </div>
+        {loading && (
+          <div className={styles.loader}>
+            <Loader />
+          </div>
+        )}
       </main>
     </>
   );

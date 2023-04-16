@@ -10,8 +10,6 @@
     padding: 1.2em;
     background-color: var(--primary-white);
   }
-  
-
 
 .main > input {
     width: 75%;
@@ -24,4 +22,10 @@
     background-color: transparent;
     padding-left: .7em;
     padding-right: .7em;
+}
+
+.samplePromps {
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
 }

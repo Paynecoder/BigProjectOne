@@ -43,9 +43,10 @@
     padding-top: 2em;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     overflow-y: scroll;
     padding-bottom: 30px;
+    scrollbar-width: none;
 }
 
 .burrgreet {
@@ -117,4 +118,15 @@
     height: 130px;
     bottom: 0;
     left: 0;
+}
+
+.gptwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.loader {
+    position: absolute;
+    bottom: 100px;
 }

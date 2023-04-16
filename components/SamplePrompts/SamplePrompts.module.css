@@ -1,0 +1,30 @@
+.main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.button {
+    background-color: var(--primary-blue);
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    animation-name: fadeInBottomToTop;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInBottomToTop {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

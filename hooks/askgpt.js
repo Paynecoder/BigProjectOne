@@ -4,7 +4,9 @@ import { useState } from "react";
 export default function askGpt() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
-  const [messagesRemaining, setMessagesRemaining] = useState(5);
+  const [messagesRemaining, setMessagesRemaining] = useState(10);
+
+  const [chat, setChat] = useState([]);
 
   const config = new Configuration({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_APIKEY,
@@ -41,5 +43,7 @@ export default function askGpt() {
     setResponse,
     messagesRemaining,
     setMessagesRemaining,
+    setChat,
+    chat,
   };
 }
