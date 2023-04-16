@@ -27,17 +27,16 @@ export default function LandingAnimation() {
         <div
           style={{
             display: "flex",
-            alignItems: "center" /* center vertically */,
-            height: "100vh" /* set parent height to viewport height */,
-            width: "100vw" /* set parent width to viewport width */,
-            overflow: "hidden" /* hide double scrollbar */,
+            alignItems: "center",
+            height: "100vh",
+            width: "100vw",
+            overflow: "hidden",
           }}
         >
           <Lottie
             animationData={animationDesktop}
             loop={false}
             onComplete={() => {
-              console.log("Animation complete");
               showButton();
             }}
             style={{
@@ -53,7 +52,6 @@ export default function LandingAnimation() {
           animationData={animation}
           loop={false}
           onComplete={() => {
-            console.log("Animation complete");
             showButton();
           }}
         />

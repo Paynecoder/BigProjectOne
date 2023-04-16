@@ -37,7 +37,12 @@ export default function SendField({ onSend }) {
         </div>
       )}
       <main className={styles.main}>
-        <Image src={question} width={40} onClick={() => setOpen(!open)} />
+        <Image
+          src={question}
+          width={40}
+          onClick={() => setOpen(!open)}
+          alt="question"
+        />
         <input
           type="text"
           id="prompt"
@@ -47,7 +52,7 @@ export default function SendField({ onSend }) {
           autoComplete="off"
           onChange={(e) => setPrompt(e.target.value)}
         />
-        <Image src={send} width={40} onClick={handleSubmit} />
+        <Image src={send} width={40} onClick={handleSubmit} alt="send" />
       </main>
     </>
   );
