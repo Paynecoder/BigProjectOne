@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "../styles/askburr.module.css";
 import Navbar from "@/components/Navbar/index.js";
 import burr from "@/public/favicon.svg";
+import penguin from "@/public/icons/misc/penguin-pfp.svg";
 import Image from "next/image.js";
 import SendField from "@/components/SendField/index.js";
 
@@ -38,7 +39,7 @@ export default function askBurr() {
         <div className={styles.intro}>
           <h1 className={styles.title}>Ask Burr</h1>
           <p className={styles.desc}>
-            Feel Free to ask Burr any questions you have about climate change!
+            Feel free to ask Burr any questions you have about climate change!
           </p>
         </div>
         <h3>Messages Remaining: {messagesRemaining}</h3>
@@ -46,13 +47,13 @@ export default function askBurr() {
           <div className={styles.burrgreet}>
             <Image src={burr} width={50} alt="burr pfp" />
             <div className={styles.greetbubble}>
-              Hi! Im Burr, Ask me a question about the environment!
+              Hi, I'm Burr! Ask me a question about the environment!
             </div>
           </div>
           {prompt != "" && (
             <div className={styles.usrquestion}>
               <div className={styles.promptbubble}>{prompt}</div>
-              <div className={styles.pfp}></div>
+              <Image src={penguin} width={50} alt="user pfp" />
             </div>
           )}
           {response != "" && (
