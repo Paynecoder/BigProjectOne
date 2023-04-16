@@ -17,7 +17,7 @@ export default function About() {
       <Navbar />
       <main className={styles.main}>
         <div className={styles.title_head}>
-          <h1>Meet the Team!</h1>
+        <h1 style={{ fontWeight: 900 }}>Meet the Team!</h1>
         </div>
         <div className={styles.team_member}>
           <Image src={aaron} alt="Team Member 1" width={100} />
