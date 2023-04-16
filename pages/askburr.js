@@ -7,13 +7,28 @@ import Image from "next/image.js";
 import SendField from "@/components/SendField/index.js";
 
 export default function askBurr() {
-  const { askBurr, prompt, setPrompt, response, setResponse } = askGpt();
-  const [messagesRemaining, setMessagesRemaining] = useState(5);
+  const {
+    askBurr,
+    prompt,
+    setPrompt,
+    response,
+    setResponse,
+    messagesRemaining,
+    setMessagesRemaining,
+  } = askGpt();
+  const [loading, setLoading] = useState(false);
 
   const handleUserInput = async (input) => {
     setPrompt(input);
-    const newResponse = await askBurr(input);
-    setResponse(newResponse);
+    if (messagesRemaining > 0) {
+      setMessagesRemaining(messagesRemaining - 1);
+      setLoading(!loading);
+      const newResponse = await askBurr(input);
+      setResponse(newResponse);
+      setLoading(!loading);
+    } else {
+      alert("No Tokens");
+    }
   };
 
   return (
@@ -31,7 +46,7 @@ export default function askBurr() {
           <div className={styles.burrgreet}>
             <Image src={burr} width={50} alt="burr pfp" />
             <div className={styles.greetbubble}>
-              Hi! Im Burr , Ask me a question about the environment!
+              Hi! Im Burr, Ask me a question about the environment!
             </div>
           </div>
           {prompt != "" && (

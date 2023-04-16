@@ -53,7 +53,6 @@
 
 .greetbubble {
     background-color: #24CF16;
-    opacity: 50%;
     width: 200px;
     border-radius: 5px;
     text-align: left;
@@ -76,7 +75,7 @@
 }
 
 .promptbubble {
-    background-color: var(--secondary-blue);
+    background-color: var(--primary-blue);
     width: 200px;
     border-radius: 5px;
     text-align: left;
@@ -102,8 +101,7 @@
 
 .responsebubble {
     background-color: #24CF16;
-    opacity: 50%;
-    width: 200px;
+    width: 250px;
     border-radius: 5px;
     text-align: left;
     color: black;

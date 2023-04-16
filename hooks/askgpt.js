@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function askGpt() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
+  const [messagesRemaining, setMessagesRemaining] = useState(5);
 
   const config = new Configuration({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_APIKEY,
@@ -21,12 +22,7 @@ export default function askGpt() {
         {
           role: "system",
           content:
-            "Hi I'm Burr! Ask me questions about the environment and climate change! Im here to make a difference!",
-        },
-        {
-          role: "system",
-          content:
-            "Only respond to questions that are relevant to the environment. Respond briefly and concisely but using child friendly and playful language. Respond with a question if you don't know the answer. 5 Words or less. ",
+            "Hi I'm Burr! Ask me questions about the environment and climate change! Im here to make a difference! Only respond to questions that are relevant to the environment. Respond briefly and concisely but using child friendly and playful language. Respond with a question if you don't know the answer. 2 Sentences Max or less.",
         },
         {
           role: "user",
@@ -37,5 +33,13 @@ export default function askGpt() {
     return completion.data.choices[0].message.content;
   }
 
-  return { askBurr, prompt, setPrompt, response, setResponse };
+  return {
+    askBurr,
+    prompt,
+    setPrompt,
+    response,
+    setResponse,
+    messagesRemaining,
+    setMessagesRemaining,
+  };
 }
