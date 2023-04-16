@@ -34,6 +34,7 @@ export default function SendField({ onSend }) {
           onChange={(e) => setPrompt(e.target.value)}
         />
         <Image src={send} width={40} onClick={handleSubmit} />
+        
       </main>
     </>
   );

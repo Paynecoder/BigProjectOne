@@ -65,6 +65,7 @@ export default function askBurr() {
         </div>
         <div className={styles.fieldwrap}>
           <SendField onSend={handleUserInput} />
+          <div className={styles.bg}></div>
         </div>
       </main>
     </>
