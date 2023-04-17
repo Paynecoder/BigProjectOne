@@ -8,11 +8,10 @@ import { useAnswers } from "@/hooks/answerContext";
 import Button from "@/components/Button";
 import down from "@/public/icons/misc/caret-down-solid.svg";
 import Image from "next/image";
-import router from "next/router";
+
 
 export default function VisitBurrOne() {
   const { score } = useAnswers();
-  const router = useRouter();
 
   function findAnim(score) {
     switch (score) {
@@ -55,7 +54,6 @@ export default function VisitBurrOne() {
             }}
           >
             <Lottie animationData={anim} loop={true} onComplete={() => {
-              router.push("/askburr")
             }} />
           </div>
         )}
