@@ -91,6 +91,17 @@
     gap: .5em;
 }
 
+.tutorial {
+    position: relative;
+    margin-top: 20px;
+    color: var(--primary-gray);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+
 @keyframes hover {
     0% {
         transform: translateY(0);

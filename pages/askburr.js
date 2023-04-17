@@ -1,5 +1,5 @@
 import askGpt from "../hooks/askgpt.js";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "../styles/askburr.module.css";
 import Navbar from "@/components/Navbar/index.js";
 import burr from "@/public/favicon.svg";
@@ -18,7 +18,9 @@ export default function askBurr() {
     chat,
     setChat,
   } = askGpt();
+
   const [loading, setLoading] = useState(false);
+  const endref = useRef(null);
 
   const handleUserInput = async (input) => {
     setPrompt(input);
@@ -33,6 +35,14 @@ export default function askBurr() {
       alert("No Tokens");
     }
   };
+
+  const scrollToBottom = () => {
+    endref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chat]);
 
   return (
     <>
@@ -64,6 +74,7 @@ export default function askBurr() {
               </div>
             </div>
           ))}
+          <div ref={endref}></div>
         </div>
         <div className={styles.fieldwrap}>
           <SendField onSend={handleUserInput} />

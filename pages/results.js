@@ -8,6 +8,7 @@ import right from "@/public/icons/misc/check-solid.svg";
 import wrong from "@/public/icons/misc/xmark-solid.svg";
 import Button from "@/components/Button";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 export default function Results() {
   const { answers, score } = useAnswers();
@@ -134,6 +135,19 @@ export default function Results() {
         <div>
           {score > 0 && (
             <ShinyButton word={"Visit Burr!"} route={`/visitburr`} />
+          )}
+          {score > 0 && (
+            <Link
+              href="/quiz"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <div className={styles.tutorial}>Retake the Quiz</div>
+            </Link>
           )}
         </div>
       </div>
