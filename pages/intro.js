@@ -38,8 +38,8 @@ export default function Home() {
             <Button word={"Talk to Burr"} route={"/askburr"} />
           </div>
         </div>
-        <Link href="/tutorial">
-          <div className={styles.tutorial}>View Tutorial</div>
+        <Link href="/about">
+          <div className={styles.about}>LEARN MORE</div>
         </Link>
       </main>
     </>
