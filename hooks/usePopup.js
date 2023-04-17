@@ -26,7 +26,7 @@ export default function usePopup() {
     // Render the Popup component
     const popup = (
       <Popup
-        color={isCorrect ? "#24CF16" : "#B91A1A"}
+        color={isCorrect ? "#24CF16" : "#F2A500"}
         paragraph={isCorrect ? goodFeedback : badFeedback}
       />
     );
