@@ -77,12 +77,12 @@ export default function Navbar() {
           </li>
           <li
             onClick={() => {
-              router.push("/visitburr");
+              router.push("/askburr");
               setMenuOpen(false);
             }}
           >
-            <Image src={visitico} alt="visit" />
-            <span>Visit Burr</span>
+            <Image src={visitico} alt="askburr" />
+            <span>Ask Burr</span>
           </li>
           <li
             onClick={() => {
@@ -93,22 +93,13 @@ export default function Navbar() {
             <Image src={aboutico} alt="about" />
             <span>About</span>
           </li>
-          <li
-            onClick={() => {
-              router.push("/askburr");
-              setMenuOpen(false);
-            }}
-          >
-            <Image src={tutico} alt="about" />
-            <span>Ask Burr</span>
-          </li>
         </ul>
         <Image
           src={bear}
           alt="bear"
-          width={75}
+          width={100}
           style={{
-            marginTop: "10px",
+            marginTop: "50px",
           }}
         />
       </aside>

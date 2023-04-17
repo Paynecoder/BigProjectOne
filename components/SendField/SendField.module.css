@@ -29,3 +29,10 @@
     bottom: 15%;
     left: 20%;
 }
+
+@media (min-width: 415px) and (min-height: 897px) {
+    /* DESKTOP CSS */
+    .main {
+        width: clamp(350px, 50vw, 500px);
+    }
+  }

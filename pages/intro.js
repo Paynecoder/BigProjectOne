@@ -5,6 +5,7 @@ import Button from "@/components/Button/index.js";
 import ShinyButton from "@/components/ShinyButton/index.js";
 import Navbar from "@/components/Navbar";
 import Iceberg from "@/components/Iceberg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -29,10 +30,17 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={styles.button}>
-          <Button word={"Climate Quiz"} route={"/quiz"} />
+        <div className={styles.buttonContainer}>
+          <div className={styles.button}>
+            <Button word={"Climate Quiz"} route={"/quiz"} />
+          </div>
+          <div className={styles.button}>
+            <Button word={"Talk to Burr"} route={"/askburr"} />
+          </div>
         </div>
-        <div className={styles.tutorial}>View Tutorial</div>
+        <Link href="/tutorial">
+          <div className={styles.tutorial}>View Tutorial</div>
+        </Link>
       </main>
     </>
   );

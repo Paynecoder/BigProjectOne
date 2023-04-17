@@ -8,18 +8,27 @@
     cursor: pointer;
 }
 
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .main {
     display: grid;
     place-items: center;
 }
 
 .iceberg {
-    margin-top: 2rem;
+    margin-top: 0;
+    transform: scale(0.8)
 }
 
 .message {
     text-align: center;
     padding: 30px;
+    padding-top: 0;
+    padding-bottom: 5px;
 }
 
 .message h1 {
@@ -49,6 +58,7 @@
     margin-bottom: 50px;
     cursor: pointer;
 }
+
 
 @media (min-width: 415px) and (min-height: 897px) {
     /* DESKTOP CSS */

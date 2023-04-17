@@ -130,3 +130,43 @@
     position: absolute;
     bottom: 100px;
 }
+
+@media (min-width: 415px) and (min-height: 897px) {
+    /* DESKTOP CSS */
+    .chatbox {
+        position: absolute;
+        bottom: 130px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+    
+    .usrquestion {
+        margin-left: 60%;
+    }
+
+    .promptbubble {
+        width: 500px;
+    }
+
+    .greetbubble {
+        width: 500px;
+    }
+
+    .responsebubble {
+        width: 500px;
+    }
+
+    .bg {
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 150vw;
+
+    }
+
+    .fieldwrap {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        padding-bottom: 2em;
+    }
+  }
