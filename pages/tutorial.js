@@ -15,6 +15,7 @@ export default function About() {
         <Navbar />
         <div className={styles.title_head}>
           <h1>Tutorial</h1>
+          <p>Coming soon...</p>
         </div>
       </main>
     </>
