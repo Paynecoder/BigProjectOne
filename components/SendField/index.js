@@ -51,6 +51,7 @@ export default function SendField({ onSend }) {
           value={prompt}
           autoComplete="off"
           onChange={(e) => setPrompt(e.target.value)}
+          onFocus={() => setOpen(false)}
         />
         <Image src={send} width={40} onClick={handleSubmit} alt="send" />
       </main>

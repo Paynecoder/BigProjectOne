@@ -93,8 +93,24 @@ export default function Navbar() {
             <Image src={aboutico} alt="about" />
             <span>About</span>
           </li>
+          <li
+            onClick={() => {
+              router.push("/askburr");
+              setMenuOpen(false);
+            }}
+          >
+            <Image src={tutico} alt="about" />
+            <span>Ask Burr</span>
+          </li>
         </ul>
-        <Image src={bear} className={styles.menu__bear} alt="bear" />
+        <Image
+          src={bear}
+          alt="bear"
+          width={75}
+          style={{
+            marginTop: "10px",
+          }}
+        />
       </aside>
       <style jsx>
         {`
@@ -108,7 +124,7 @@ export default function Navbar() {
             background: var(--primary-white);
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
             transition: right 0.25s ease-in-out;
-            padding: 2em;
+            padding: 4em;
             display: flex;
             flex-direction: column;
             align-items: center;
