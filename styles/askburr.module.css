@@ -145,7 +145,8 @@
     }
     
     .usrquestion {
-        margin-left: 60%;
+        margin-left: 30%;
+        width: 500px;
     }
 
     .promptbubble {
