@@ -8,7 +8,8 @@ import { useAnswers } from "@/hooks/answerContext";
 import Button from "@/components/Button";
 import down from "@/public/icons/misc/caret-down-solid.svg";
 import Image from "next/image";
-
+import Navbar from "@/components/Navbar";
+import styles from "@/styles/Visitburr.module.css";
 
 export default function VisitBurrOne() {
   const { score } = useAnswers();
@@ -38,6 +39,9 @@ export default function VisitBurrOne() {
 
   return (
     <>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
       <main
         style={{
           overflow: "hidden",
@@ -53,8 +57,7 @@ export default function VisitBurrOne() {
               height: "100vh",
             }}
           >
-            <Lottie animationData={anim} loop={true} onComplete={() => {
-            }} />
+            <Lottie animationData={anim} loop={true} onComplete={() => {}} />
           </div>
         )}
         {score === 0 && (
