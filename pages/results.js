@@ -82,6 +82,9 @@ export default function Results() {
 
   return (
     <main>
+      <head>
+        <title>Results</title>
+      </head>
       <Navbar />
       <div className={styles.main}>
         <Image

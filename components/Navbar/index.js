@@ -68,12 +68,12 @@ export default function Navbar() {
           </li>
           <li
             onClick={() => {
-              router.push("/tutorial");
+              router.push("/abouttheapp");
               setMenuOpen(false);
             }}
           >
             <Image src={tutico} alt="tut" />
-            <span>Tutorial</span>
+            <span>Info</span>
           </li>
           <li
             onClick={() => {

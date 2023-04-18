@@ -56,6 +56,9 @@ export default function Quiz() {
 
   return (
     <>
+      <head>
+        <title>Quiz</title>
+      </head>
       <Navbar />
       <div className={styles.progresscontainer}>
         <div

@@ -1,0 +1,33 @@
+.title_head {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--primary-gray);
+    font-size: 3rem;
+    font-weight: 900 !important;
+  }
+
+  .title_desc {
+    margin-top: 30px;
+    font-size: 24px;
+    font-family: 'Nunito';
+    font-weight: 400;
+    color: var(--secondary-gray);
+    text-align: center;
+   margin-bottom: 30px;
+  }
+
+  .button {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
