@@ -32,13 +32,13 @@
 
   .team_member h3 {
     color: var(--primary-gray);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 900;
     margin: 0;
   }
 
   .team_member p {
-    font-size: 13px;
+    font-size: 15px;
     margin: 10px 0;
     color: var(--secondary-gray);
   }
