@@ -92,7 +92,7 @@ export default function Quiz() {
                   updateAnswers({ questionId: currentQuestionData.id, answer });
                   if (
                     answer === currentQuestionData.correctAnswer ||
-                    (currentQuestionData.correctAnswerTwo &&
+                    (answer === currentQuestionData.correctAnswerTwo &&
                       currentQuestion === currentQuestionData.id)
                   ) {
                     updateScore();
