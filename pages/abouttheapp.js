@@ -12,8 +12,8 @@ export default function About() {
         <title>About the App</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
+      <Navbar />
       <main className={styles.main}>
-        <Navbar />
         <div className={styles.title_head}>
           <p>About the App</p>
         </div>
