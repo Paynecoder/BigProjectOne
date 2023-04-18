@@ -68,12 +68,12 @@ export default function Navbar() {
           </li>
           <li
             onClick={() => {
-              router.push("/abouttheapp");
+              router.push("/about");
               setMenuOpen(false);
             }}
           >
-            <Image src={tutico} alt="tut" />
-            <span>Info</span>
+            <Image src={tutico} alt="about" />
+            <span>About</span>
           </li>
           <li
             onClick={() => {
@@ -86,12 +86,12 @@ export default function Navbar() {
           </li>
           <li
             onClick={() => {
-              router.push("/about");
+              router.push("/team");
               setMenuOpen(false);
             }}
           >
-            <Image src={aboutico} alt="about" />
-            <span>About</span>
+            <Image src={aboutico} alt="team" />
+            <span>Our Team</span>
           </li>
         </ul>
         <Image
