@@ -13,8 +13,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.titleContainer}>
-          <h1 className={styles.title}>Brrriliant</h1>
-          <h1 className={styles.titleShadow}>Brrriliant</h1>
+          <h1 className={styles.title}>Brrrilliant</h1>
+          <h1 className={styles.titleShadow}>Brrrilliant</h1>
         </div>
         <div className={styles.animation}>
           <Landing />
