@@ -32,7 +32,7 @@ export default function askBurr() {
       setResponse(newResponse);
       setLoading(false);
     } else {
-      alert("No Tokens");
+      alert("You have reached the maximum number of messages!");
     }
   };
 
