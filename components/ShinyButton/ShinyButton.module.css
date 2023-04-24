@@ -44,6 +44,11 @@
     background-size: 250%;
     animation: slideBackground 2s ease-in-out infinite alternate;
   }
+
+  .buttonClicked {
+    transition-duration: 200ms;
+    box-shadow: 0px 0px 0px #ad8334;
+  }
   
   @keyframes slideBackground {
     from {
