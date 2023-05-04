@@ -42,7 +42,7 @@
 
 .reswrap {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
     gap: 2em;
@@ -112,4 +112,12 @@
     100% {
         transform: translateY(0);
     }
+}
+
+
+@media (min-width: 415px) {
+  .main {
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
 }

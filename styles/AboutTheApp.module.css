@@ -34,3 +34,9 @@
     margin-bottom: 40px;
 }
 
+@media (min-width: 415px) {
+  .main {
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+}

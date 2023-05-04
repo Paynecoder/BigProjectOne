@@ -6,19 +6,22 @@ import animationfive from "@/public/lottie/visit-burr-5.json";
 import Lottie from "lottie-react";
 import { useAnswers } from "@/hooks/answerContext";
 import Button from "@/components/Button";
-import down from "@/public/icons/misc/caret-down-solid.svg";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import styles from "@/styles/Visitburr.module.css";
 import InfoIcon from "@/components/InfoIcon";
+import { useEffect, useState } from "react";
 
 export default function VisitBurrOne() {
+  const [clientSide, setClientSide] = useState(false);
   const { score } = useAnswers();
+
+  useEffect(() => {
+    setClientSide(true);
+  }, []);
 
   function findAnim(score) {
     switch (score) {
-      case 0:
-        return;
       case 1:
         return animationfive;
       case 2:
@@ -32,7 +35,7 @@ export default function VisitBurrOne() {
       case 6:
         return animationone;
       default:
-        return animationfive;
+        return null;
     }
   }
 
@@ -43,9 +46,19 @@ export default function VisitBurrOne() {
       <div className={styles.navbar}>
         <Navbar />
       </div>
-      <div className={styles.info}>
-        <InfoIcon />
-      </div>
+      {clientSide && score !== 0 && (
+        <motion.div
+          className={styles.info}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { type: "spring", mass: 0.8, damping: 10, delay: 1 },
+          }}
+        >
+          <InfoIcon />
+        </motion.div>
+      )}
       <main
         style={{
           overflow: "hidden",
@@ -54,7 +67,7 @@ export default function VisitBurrOne() {
           placeItems: "center",
         }}
       >
-        {score > 0 && (
+        {anim && (
           <div
             style={{
               overflow: "hidden",
@@ -64,8 +77,8 @@ export default function VisitBurrOne() {
             <Lottie animationData={anim} loop={true} onComplete={() => {}} />
           </div>
         )}
-        {score === 0 && (
-          <Button word={"Take the quiz to visit Burr!"} route={"/quiz"} />
+        {!anim && score === 0 && (
+          <Button word={"Try the quiz!"} route={"/quiz"} />
         )}
       </main>
     </>

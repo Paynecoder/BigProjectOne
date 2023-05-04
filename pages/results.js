@@ -107,7 +107,7 @@ export default function Results() {
             <Image src={down} width={25} alt="image" />
           </div>
         )}
-        {score === 0 && <Button word={"Try the Quiz!"} route={"/quiz"} />}
+        {score === 0 && <Button word={"Try the quiz!"} route={"/quiz"} />}
         <div className={styles.reswrap}>
           {answers.map((answer, index) => {
             const question = questions.find((q) => q.id === answer.questionId);
