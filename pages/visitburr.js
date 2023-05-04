@@ -10,6 +10,7 @@ import down from "@/public/icons/misc/caret-down-solid.svg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import styles from "@/styles/Visitburr.module.css";
+import InfoIcon from "@/components/InfoIcon";
 
 export default function VisitBurrOne() {
   const { score } = useAnswers();
@@ -41,6 +42,9 @@ export default function VisitBurrOne() {
     <>
       <div className={styles.navbar}>
         <Navbar />
+      </div>
+      <div className={styles.info}>
+        <InfoIcon />
       </div>
       <main
         style={{
