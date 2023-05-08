@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Landing Page</title>
+        <title>Brrrilliant</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className={styles.main}>

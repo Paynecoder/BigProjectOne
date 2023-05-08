@@ -10,6 +10,10 @@ import carter from "@/public/Avatars/cartburr.png";
 export default function Team() {
   return (
     <>
+      <Head>
+        <title>Meet the Team</title>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <Navbar />
       <main className={styles.main}>
         <div className={styles.title_head}>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Router from "next/router";
 import usePopup from "@/hooks/usePopup";
 import { useAnswers } from "@/hooks/answerContext";
+import Head from "next/head";
 
 export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -56,6 +57,10 @@ export default function Quiz() {
 
   return (
     <>
+      <Head>
+        <title>Climate Quiz</title>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <Navbar />
       <div className={styles.progresscontainer}>
         <div

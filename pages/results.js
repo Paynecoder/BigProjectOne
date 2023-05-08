@@ -9,6 +9,7 @@ import wrong from "@/public/icons/misc/xmark-solid.svg";
 import Button from "@/components/Button";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Results() {
   const { answers, score } = useAnswers();
@@ -82,9 +83,10 @@ export default function Results() {
 
   return (
     <main>
-      <head>
+      <Head>
         <title>Results</title>
-      </head>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <Navbar />
       <div className={styles.main}>
         <Image

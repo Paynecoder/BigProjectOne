@@ -7,6 +7,7 @@ import penguin from "@/public/icons/misc/penguin-pfp.svg";
 import Image from "next/image.js";
 import SendField from "@/components/SendField/index.js";
 import Loader from "@/components/Loader/index.js";
+import Head from "next/head";
 
 export default function askBurr() {
   const {
@@ -46,6 +47,10 @@ export default function askBurr() {
 
   return (
     <>
+      <Head>
+        <title>Ask Burr</title>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <Navbar />
       <main className={styles.main}>
         <div className={styles.intro}>

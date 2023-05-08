@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/MenuPopUp.module.css";
-import Button from "@/components/Button/index.js";
+import Button from "@/components/ShinyButton/index.js";
 import Navbar from "@/components/Navbar";
 
 export default function MenuPopup() {

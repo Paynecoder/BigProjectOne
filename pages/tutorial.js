@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Meet the Team</title>
+        <title>Tutorial</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className={styles.main}>

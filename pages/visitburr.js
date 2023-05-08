@@ -11,6 +11,7 @@ import Navbar from "@/components/Navbar";
 import styles from "@/styles/Visitburr.module.css";
 import InfoIcon from "@/components/InfoIcon";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function VisitBurrOne() {
   const [clientSide, setClientSide] = useState(false);
@@ -43,6 +44,10 @@ export default function VisitBurrOne() {
 
   return (
     <>
+      <Head>
+        <title>Visit Burr</title>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <div className={styles.navbar}>
         <Navbar />
       </div>
