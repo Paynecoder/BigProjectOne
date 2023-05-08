@@ -71,7 +71,35 @@ export default function VisitBurrOne() {
               height: "100vh",
             }}
           >
-            <Lottie animationData={anim} loop={true} onComplete={() => {}} />
+            <Lottie
+              animationData={anim}
+              loop={true}
+              onComplete={() => {}}
+              className={styles.lottie}
+            />
+
+            <div className={styles.desktopInfo}>
+              <div className={styles.title_head}>
+                <p>Your Impact Matters.</p>
+              </div>
+              <div className={styles.title_desc}>
+                <p>
+                  Burr’s habitat changes based on your quiz results. The higher
+                  you score, the more populated his home will be. Every choice
+                  you make throughout your day has an impact on the world around
+                  you.
+                </p>
+              </div>
+              <div className={styles.title_desc}>
+                <p>
+                  Still have questions about the environment? Why don’t you talk
+                  to Burr himself?
+                </p>
+              </div>
+              <div className={styles.button}>
+                <Button word={"Talk to Burr"} route={"/askburr"} />
+              </div>
+            </div>
           </div>
         )}
         {!anim && score === 0 && (
