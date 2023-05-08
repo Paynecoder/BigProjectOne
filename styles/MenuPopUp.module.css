@@ -19,14 +19,15 @@
      margin-bottom: 30px;
     }
 
+    .button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
     @media (min-width: 415px) {
       .main {
         margin-left: 25vw;
         margin-right: 25vw;
-      }
-      .button {
-        width: 100%;
-        display: flex;
-        justify-content: center;
       }
     }

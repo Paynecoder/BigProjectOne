@@ -47,17 +47,9 @@ export default function VisitBurrOne() {
         <Navbar />
       </div>
       {clientSide && score !== 0 && (
-        <motion.div
-          className={styles.info}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", mass: 0.8, damping: 10, delay: 1 },
-          }}
-        >
+        <div className={styles.info}>
           <InfoIcon />
-        </motion.div>
+        </div>
       )}
       <main
         style={{

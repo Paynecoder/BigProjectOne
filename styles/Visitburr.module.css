@@ -45,5 +45,18 @@
 }
 
 .info{
-    padding-left: 2em;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 2s;
+    position: absolute;
+    margin-top: 1em;
+    margin-left: -5em;
+}
+
+@keyframes fadeIn {
+    0% {
+        margin-left: -5em;
+    }
+    100% {
+        margin-left: 2em;
+    }
 }
