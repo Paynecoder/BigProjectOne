@@ -34,9 +34,9 @@ export default function Home() {
           <div className={styles.button}>
             <Button word={"Climate Quiz"} route={"/quiz"} />
           </div>
-          <div className={styles.button}>
+          {/* <div className={styles.button}>
             <Button word={"Talk to Burr"} route={"/askburr"} />
-          </div>
+          </div> */}
         </div>
         <Link href="/about">
           <div className={styles.about}>LEARN MORE</div>

@@ -1,0 +1,12 @@
+.main {
+    color: var(--primary-gray);
+    font-size: 2em;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}

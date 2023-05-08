@@ -13,3 +13,7 @@ npm i
 ```
 npm i react-chartjs-2
 ```
+
+```
+npm i framer-motion
+```

@@ -28,3 +28,7 @@
     width: 125px;
     height: 125px;
 }
+
+.back {
+    transform: scale(0.95);
+}

@@ -1,6 +1,6 @@
 import styles from "@/components/Navbar/Navbar.module.css";
 import bear from "@/public/Navbar/BurrFavi.svg";
-import arrow from "@/public/icons/misc/rotate-left-solid.svg";
+import arrow from "@/public/icons/misc/back-arrow.svg";
 import homeico from "@/public/Navbar/home.svg";
 import quizico from "@/public/Navbar/quiz.svg";
 import tutico from "@/public/Navbar/tut.svg";
@@ -29,7 +29,12 @@ export default function Navbar() {
             }
           }}
         >
-          <Image src={arrow} alt="Back Button" width={50} />
+          <Image
+            src={arrow}
+            alt="Back Button"
+            width={50}
+            className={styles.back}
+          />
         </div>
         <div>
           <h1 className={styles.nav__title}>
