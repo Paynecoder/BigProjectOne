@@ -25,7 +25,7 @@ export default function Home() {
           <h1>Did you know?</h1>
           <p>
             Polar bears have been considered a threatened species in the
-            <b> engangered species</b> act since 2008. Find out how you can help
+            <b> endangered species</b> act since 2008. Find out how you can help
             by taking the quiz below!
           </p>
         </div>
