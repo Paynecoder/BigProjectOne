@@ -26,15 +26,29 @@ export default function askBurr() {
   const handleUserInput = async (input) => {
     setPrompt(input);
     setLoading(true);
+
     if (messagesRemaining > 0) {
       setMessagesRemaining(messagesRemaining - 1);
-      const newChat = [...chat, { prompt: input, response: "..." }];
+      const newChat = [...chat, { prompt: input, response: "" }];
+      setChat(newChat);
+
       const newResponse = await askBurr(
         newChat.map((m) => m.prompt).join("\n")
       );
-      setChat([...chat, { prompt: input, response: newResponse }]);
-      setResponse(newResponse);
-      setLoading(false);
+
+      let responseIndex = 0;
+      const typingEffectInterval = setInterval(() => {
+        if (responseIndex < newResponse.length) {
+          const updatedChat = [...newChat];
+          updatedChat[newChat.length - 1].response +=
+            newResponse[responseIndex];
+          setChat(updatedChat);
+          responseIndex++;
+        } else {
+          clearInterval(typingEffectInterval);
+          setLoading(false);
+        }
+      }, 27.5);
     } else {
       alert("You have reached the maximum number of messages!");
     }
