@@ -26,10 +26,19 @@ export default function askBurr() {
   const handleUserInput = async (input) => {
     setPrompt(input);
     setLoading(true);
+
     if (messagesRemaining > 0) {
       setMessagesRemaining(messagesRemaining - 1);
-      const newResponse = await askBurr(input);
-      setChat([...chat, { prompt: input, response: newResponse }]);
+
+      const newResponse = await askBurr(
+        [...chatHistory, { prompt: input }]
+          .map((item) => item.prompt)
+          .join("\n")
+      );
+
+      const newChatEntry = { prompt: input, response: newResponse };
+
+      setChatHistory((prevChat) => [...prevChat, newChatEntry]);
       setResponse(newResponse);
       setLoading(false);
     } else {
