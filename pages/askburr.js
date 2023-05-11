@@ -24,6 +24,7 @@ export default function askBurr() {
   const endref = useRef(null);
 
   const handleUserInput = async (input) => {
+    if (input === "") return;
     setPrompt(input);
     setLoading(true);
 
@@ -40,8 +41,10 @@ export default function askBurr() {
       const typingEffectInterval = setInterval(() => {
         if (responseIndex < newResponse.length) {
           const updatedChat = [...newChat];
-          updatedChat[newChat.length - 1].response +=
-            newResponse[responseIndex];
+          updatedChat[newChat.length - 1].response = newResponse.substring(
+            0,
+            responseIndex + 1
+          );
           setChat(updatedChat);
           responseIndex++;
         } else {
