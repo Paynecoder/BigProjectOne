@@ -33,9 +33,7 @@ export default function askBurr() {
       const newChat = [...chat, { prompt: input, response: "" }];
       setChat(newChat);
 
-      const newResponse = await askBurr(
-        newChat.map((m) => m.prompt).join("\n")
-      );
+      const newResponse = await askBurr(prompt);
 
       let responseIndex = 0;
       const typingEffectInterval = setInterval(() => {
