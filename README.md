@@ -14,4 +14,4 @@ The team for this project consisted of:
   
 ## Important Note
 
-As this is _ literally BCIT MDIA 2106 code_, it should neither be taken as an example of proper React and nextJS conventions, nor as an example of the present abilities of any of the team members listed above.
+As this is _literally BCIT MDIA 2106 code_, it should neither be taken as an example of proper React and nextJS conventions, nor as an example of the present abilities of any of the team members listed above.
